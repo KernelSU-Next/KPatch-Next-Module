@@ -3,134 +3,107 @@ import * as patchModule from './page/patch.js';
 const backBtn = document.getElementById('back-btn');
 
 function setupExitBtn() {
-    if (typeof window.ksu !== 'undefined' && typeof window.ksu.exit !== 'undefined') {
+    const ksuExit = typeof window.ksu?.exit === 'function';
+    const webuiExit = typeof window.webui?.exit === 'function';
+
+    if (ksuExit || webuiExit) {
         backBtn.style.display = 'inline-flex';
-        backBtn.onclick = () => ksu.exit();
-    } else if (typeof window.webui !== 'undefined' && typeof window.webui.exit !== 'undefined') {
-        backBtn.style.display = 'inline-flex';
-        backBtn.onclick = () => webui.exit();
+        backBtn.onclick = (e) => {
+            e.stopPropagation();
+            setTimeout(() => ksuExit ? window.ksu.exit() : window.webui.exit(), 0);
+        };
     } else {
         backBtn.style.display = 'none';
+        backBtn.onclick = null;
+    }
+}
+
+// Page switcher
+function switchPage(pageId, title, navId = null) {
+    document.getElementById('close-search-btn')?.click();
+    document.querySelectorAll('.page').forEach(p => p.classList.toggle('active', p.id === pageId));
+    document.querySelector('.title').textContent = title;
+
+    // Icon
+    document.getElementById('home-icon').style.display = (pageId === 'home-page' ? 'flex' : 'none');
+    document.getElementById('exclude-icon').style.display = (pageId === 'exclude-page' ? 'flex' : 'none');
+
+    // Bottom Bar
+    const isPrimary = navId !== null;
+    document.querySelector('.bottom-bar').classList.toggle('hide', !isPrimary);
+    document.querySelector('.content').style.marginBottom = isPrimary ? '80px' : '0';
+
+    if (isPrimary) {
+        updateBottomBar(navId);
+        setupExitBtn();
+    } else {
+        backBtn.style.display = 'inline-flex';
+        backBtn.onclick = (e) => {
+            e.stopPropagation();
+            navigateToHome();
+        };
+    }
+}
+
+// Patch/UnPatch
+function preparePatchUI(title, isUnpatch) {
+    switchPage('patch-page', title);
+    document.querySelector('.trailing-btn').style.display = 'flex';
+    document.getElementById('patch-terminal').innerHTML = '';
+    document.getElementById('reboot-fab').classList.add('hide');
+
+    document.querySelectorAll('.patch-only').forEach(p => p.classList.toggle('hidden', isUnpatch));
+    document.querySelectorAll('.unpatch-only').forEach(p => p.classList.toggle('hidden', !isUnpatch));
+
+    if (isUnpatch) {
+        document.getElementById('patch-keyboard-inset').classList.remove('hide');
     }
 }
 
 export function navigateToHome() {
-    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-    document.getElementById('home-page').classList.add('active');
-    document.querySelector('.title').textContent = 'KPatch Next';
-    document.getElementById('home-icon').style.display = 'flex';
-    document.getElementById('exclude-icon').style.display = 'none';
-
-    updateBottomBar('home');
-    setupExitBtn();
+    switchPage('home-page', 'KPatch Next', 'home');
 }
 
 function navigateToKPM() {
-    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-    document.getElementById('kpm-page').classList.add('active');
-    document.querySelector('.title').textContent = 'KPModule';
-    document.getElementById('home-icon').style.display = 'none';
-    document.getElementById('exclude-icon').style.display = 'none';
-
-    updateBottomBar('KPM');
-    setupExitBtn();
+    switchPage('kpm-page', 'KPModule', 'KPM');
 }
 
 function navigateToExclude() {
-    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-    document.getElementById('exclude-page').classList.add('active');
-    document.querySelector('.title').textContent = 'Exclude';
-    document.getElementById('home-icon').style.display = 'none';
-    document.getElementById('exclude-icon').style.display = 'flex';
-
-    updateBottomBar('exclude');
-    setupExitBtn();
+    switchPage('exclude-page', 'Exclude', 'exclude');
 }
 
 function navigateToSettings() {
-    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-    document.getElementById('settings-page').classList.add('active');
-    document.querySelector('.title').textContent = 'Settings';
-    document.getElementById('home-icon').style.display = 'none';
-    document.getElementById('exclude-icon').style.display = 'none';
-
-    updateBottomBar('settings');
-    setupExitBtn();
+    switchPage('settings-page', 'Settings', 'settings');
 }
 
 function navigateToPatch() {
-    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-    document.getElementById('patch-page').classList.add('active');
-    document.querySelector('.title').textContent = 'Patch';
-    document.getElementById('home-icon').style.display = 'none';
-    document.getElementById('exclude-icon').style.display = 'none';
-    document.querySelector('.trailing-btn').style.display = 'flex';
-    document.getElementById('patch-terminal').innerHTML = '';
-    document.getElementById('reboot-fab').classList.add('hide');
-    document.querySelectorAll('.patch-only').forEach(p => p.classList.remove('hidden'));
-    document.querySelectorAll('.unpatch-only').forEach(p => p.classList.add('hidden'));
-    backBtn.style.display = 'inline-flex';
-    backBtn.onclick = () => navigateToHome();
-
+    preparePatchUI('Patch', false);
     patchModule.getKpimgInfo();
     patchModule.getKernelInfo();
 }
 
 function navigateToUnPatch() {
-    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-    document.getElementById('patch-page').classList.add('active');
-    document.querySelector('.title').textContent = 'UnPatch';
-    document.getElementById('home-icon').style.display = 'none';
-    document.getElementById('exclude-icon').style.display = 'none';
-    document.querySelector('.trailing-btn').style.display = 'flex';
-    document.getElementById('patch-terminal').innerHTML = '';
-    document.getElementById('patch-keyboard-inset').classList.remove('hide');
-    document.getElementById('reboot-fab').classList.add('hide');
-    document.querySelectorAll('.patch-only').forEach(p => p.classList.add('hidden'));
-    document.querySelectorAll('.unpatch-only').forEach(p => p.classList.remove('hidden'));
-    backBtn.style.display = 'inline-flex';
-    backBtn.onclick = () => navigateToHome();
-
+    preparePatchUI('UnPatch', true);
     patchModule.getKernelInfo();
 }
 
 function updateBottomBar(activeId) {
     document.querySelectorAll('.bottom-bar-item').forEach(item => {
-        if (item.id === activeId) {
-            item.setAttribute('selected', '');
-        } else {
-            item.removeAttribute('selected');
-        }
+        item.toggleAttribute('selected', item.id === activeId);
     });
 }
 
 export function setupRoute() {
-    // patch button
-    document.getElementById('patch-btn').onclick = () => navigateToPatch();
+    document.getElementById('patch-btn').onclick = navigateToPatch;
+    document.getElementById('uninstall').onclick = navigateToUnPatch;
+    document.getElementById('not-installed').onclick = navigateToPatch;
 
-    // uninstall button
-    document.getElementById('uninstall').onclick = () => navigateToUnPatch();
-
-    // not installed card
-    document.getElementById('not-installed').addEventListener('click', () => {
-        navigateToPatch();
-    });
-
-    // Bottom bar
     document.querySelectorAll('.bottom-bar-item').forEach(item => {
         item.addEventListener('click', () => {
-            if (item.id === 'home') {
-                navigateToHome();
-            } else if (item.id === 'KPM') {
-                navigateToKPM();
-            } else if (item.id === 'exclude') {
-                navigateToExclude();
-            } else if (item.id === 'settings') {
-                navigateToSettings();
-            }
+            const routes = { home: navigateToHome, KPM: navigateToKPM, exclude: navigateToExclude, settings: navigateToSettings };
+            routes[item.id]?.();
         });
     });
 
-    // Init
     navigateToHome();
 }

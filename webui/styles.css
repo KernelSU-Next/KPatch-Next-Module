@@ -99,6 +99,7 @@ body {
     position: relative;
     box-sizing: border-box;
     overflow: hidden;
+    transition: margin-bottom 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .page {
@@ -409,6 +410,13 @@ md-menu-item label {
     padding-bottom: var(--bottom-inset);
     box-sizing: border-box;
     z-index: 10;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+}
+
+.bottom-bar.hide {
+    transform: translateY(100%) scaleY(0.8);
+    opacity: 0;
+    pointer-events: none;
 }
 
 .bottom-bar-item {
@@ -509,7 +517,7 @@ md-dialog [slot="content"] {
 
 .keyboard-inset {
     width: 100%;
-    padding-bottom: calc(40vh - 64px - 80px - var(--bottom-inset) - var(--top-inset));
+    padding-bottom: calc(40vh - 64px - var(--bottom-inset) - var(--top-inset));
     transition: padding-bottom 0.2s ease;
 }
 
