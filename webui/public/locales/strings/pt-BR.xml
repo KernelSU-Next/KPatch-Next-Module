@@ -18,7 +18,6 @@
     <string name="title_reboot_download">Reiniciar em Download</string>
     <string name="title_reboot_edl">Reiniciar em EDL</string>
     <string name="title_kernel">Kernel</string>
-
     <!-- Buttons -->
     <string name="button_install">Instalar</string>
     <string name="button_uninstall">Desinstalar</string>
@@ -30,8 +29,7 @@
     <string name="button_load">Carregar</string>
     <string name="button_unload">Descarregar</string>
     <string name="button_refresh">Atualizar</string>
-
-    <!-- Labels -->
+<!-- Labels -->
     <string name="label_set_superkey">Definir SuperKey</string>
     <string name="label_input_control_parameters">Inserir parâmetros de controle:</string>
     <string name="label_parameters">Parâmetros</string>
@@ -39,7 +37,6 @@
     <string name="label_show_system_app">Mostrar apps do sistema</string>
     <string name="label_system_default">Padrão do sistema</string>
     <string name="label_trigger_event">Acionar evento</string>
-
     <!-- Status -->
     <string name="status_not_installed">Não instalado</string>
     <string name="status_working">Em operação</string>
@@ -47,8 +44,7 @@
     <string name="status_authentication_failed">Falha de autenticação</string>
     <string name="status_authentication_failed_desc">A SuperKey não pôde ser autenticada; o KPatch Next não pode operar corretamente. Tente novamente.</string>
     <string name="status_loading">Carregando...</string>
-
-    <!-- Info -->
+<!-- Info -->
     <string name="info_kernel_version">Versão do kernel</string>
     <string name="info_system_version">Versão do sistema</string>
     <string name="info_fingerprint">Fingerprint</string>
@@ -65,8 +61,7 @@
     <string name="info_embedded">INCORPORADO</string>
     <string name="info_user">USUÁRIO %1$s</string>
     <string name="info_system">SISTEMA</string>
-
-    <!-- Messages -->
+<!-- Messages -->
     <string name="msg_no_module_loaded">Nenhum módulo carregado</string>
     <string name="msg_no_app_found">Nenhum app encontrado</string>
     <string name="msg_no_module_found">Nenhum módulo encontrado</string>
