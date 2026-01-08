@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- UI Labels -->
-    <string name="title_patch">Пропатчити</string>
-    <string name="title_unpatch">Видалити</string>
-    <string name="title_kpmodule">Модулі KPM</string>
+    <string name="title_patch">Patch</string>
+    <string name="title_unpatch">UnPatch</string>
+    <string name="title_kpmodule">KPModule</string>
     <string name="title_exclude">Виключити</string>
     <string name="title_settings">Налаштування</string>
     <string name="title_home">Головна</string>
