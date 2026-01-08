@@ -39,9 +39,9 @@ function parseIni(str) {
 async function getInstalledVersion() {
     if (superkey === '') return null;
     if (import.meta.env.DEV) return uInt2String('c06');
-    const working = await exec(`kpatch ${superkey} hello`, { env: { PATH: `${modDir}/bin` } });
+    const working = await exec(`kpatch '${superkey}' hello`, { env: { PATH: `${modDir}/bin` } });
     if (working.stdout.trim() === '') return null;
-    const version = await exec(`kpatch ${superkey} kpver`, { env: { PATH: `${modDir}/bin` } });
+    const version = await exec(`kpatch '${superkey}' kpver`, { env: { PATH: `${modDir}/bin` } });
     return uInt2String(version.stdout.trim());
 }
 
@@ -337,7 +337,7 @@ function patch(type) {
     if (type === "patch") {
         args.push(
             `${modDir}/boot_patch.sh`,
-            superkeyVal,
+            `'${superkeyVal}'`,
             bootDev,
             'true'
         );

@@ -8,6 +8,7 @@
     <string name="title_settings">Settings</string>
     <string name="title_home">Home</string>
     <string name="title_language">Language</string>
+    <string name="title_superkey">SuperKey</string>
     <string name="title_clear_superkey">Clear SuperKey</string>
     <string name="title_enter_superkey">Enter SuperKey</string>
     <string name="title_control_kpmodule">Control KPModule</string>
@@ -86,5 +87,6 @@
     <string name="msg_failed_get_module_info">Failed to get module info</string>
     <string name="msg_error_loading_apps">Error loading apps: </string>
     <string name="msg_error_rendering_apps">Error rendering apps: </string>
+    <string name="msg_invalid_char">Superkey contains special characters: $ " ' [ ] `</string>
     <string name="msg_unknown">Unknown</string>
 </resources>

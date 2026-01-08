@@ -46,13 +46,13 @@ async function getKpmList() {
     }
 
     const listResult = await exec(
-        `kpatch ${superkey} kpm list && sh "${modDir}/status.sh" "${superkey}"`,
+        `kpatch '${superkey}' kpm list && sh "${modDir}/status.sh" '${superkey}'`,
         { env: { PATH: `${modDir}/bin:$PATH` } }
     );
     const modules = listResult.stdout.trim().split('\n').filter(line => line.trim());
 
     const modulePromises = modules.map(async (moduleName) => {
-        const infoResult = await exec(`kpatch ${superkey} kpm info "${moduleName}"`, { env: { PATH: `${modDir}/bin` } });
+        const infoResult = await exec(`kpatch '${superkey}' kpm info "${moduleName}"`, { env: { PATH: `${modDir}/bin` } });
         const infoLines = infoResult.stdout.trim().split('\n');
 
         const moduleInfo = {};
@@ -69,7 +69,7 @@ async function getKpmList() {
 }
 
 async function controlModule(moduleName, action) {
-    const result = await exec(`kpatch ${superkey} kpm ctl0 "${moduleName}" ${action}`, { env: { PATH: `${modDir}/bin` } });
+    const result = await exec(`kpatch '${superkey}' kpm ctl0 "${moduleName}" ${action}`, { env: { PATH: `${modDir}/bin` } });
     toast(result.errno === 0 ? result.stdout : result.stderr);
 }
 
@@ -79,12 +79,12 @@ function forgetModule(moduleName) {
 
 async function unloadModule(moduleName) {
     forgetModule(moduleName);
-    const result = await exec(`kpatch ${superkey} kpm unload "${moduleName}"`, { env: { PATH: `${modDir}/bin` } });
+    const result = await exec(`kpatch '${superkey}' kpm unload "${moduleName}"`, { env: { PATH: `${modDir}/bin` } });
     return result.errno === 0;
 }
 
 async function loadModule(modulePath) {
-    const result = await exec(`kpatch ${superkey} kpm load "${modulePath}"`, { env: { PATH: `${modDir}/bin` } });
+    const result = await exec(`kpatch '${superkey}' kpm load "${modulePath}"`, { env: { PATH: `${modDir}/bin` } });
     return result.errno === 0;
 }
 

@@ -217,7 +217,7 @@ async function renderAppList() {
                     saveTimeout = setTimeout(() => {
                         saveExcludedList(excludedApps);
                     }, 500);
-                    exec(`kpatch ${superkey} exclude_set ${realUid} ${isSelected ? 1 : 0}`, { env: { PATH: `${modDir}/bin` } });
+                    exec(`kpatch '${superkey}' exclude_set ${realUid} ${isSelected ? 1 : 0}`, { env: { PATH: `${modDir}/bin` } });
                 });
 
                 appItemMap.set(appKey, item);

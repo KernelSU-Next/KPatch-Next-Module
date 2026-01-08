@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- UI Labels -->
     <string name="title_exclude">Pengecualian</string>
     <string name="title_settings">Pengaturan</string>
     <string name="title_home">Beranda</string>
@@ -13,6 +14,7 @@
     <string name="title_reboot_bootloader">Mulai Ulang ke Bootloader</string>
     <string name="title_reboot_download">Mulai Ulang ke Mode Download</string>
     <string name="title_reboot_edl">Mulai Ulang ke EDL</string>
+    <!-- Buttons -->
     <string name="button_install">Klik untuk menginstal</string>
     <string name="button_embed_kpm">Sematkan KPM</string>
     <string name="button_start">Mulai</string>
@@ -21,6 +23,7 @@
     <string name="button_load">Muat</string>
     <string name="button_unload">Lepas</string>
     <string name="button_refresh">Segarkan</string>
+    <!-- Labels -->
     <string name="label_set_superkey">Atur SuperKey</string>
     <string name="label_input_control_parameters">Masukkan parameter kontrol:</string>
     <string name="label_parameters">Parameter</string>
@@ -28,12 +31,14 @@
     <string name="label_show_system_app">Tampilkan aplikasi sistem</string>
     <string name="label_system_default">Default Sistem</string>
     <string name="label_trigger_event">Event Pemicu</string>
+    <!-- Status -->
     <string name="status_not_installed">Tidak terinstal</string>
     <string name="status_working">Berjalan</string>
     <string name="status_not_installed_or_authenticated">Tidak terinstal atau terautentikasi</string>
     <string name="status_authentication_failed">Autentikasi gagal</string>
     <string name="status_authentication_failed_desc">Gagal mengautentikasi SuperKey, sehingga KPatch Next tidak dapat bekerja dengan baik. Silakan coba lagi.</string>
     <string name="status_loading">Memuat...</string>
+    <!-- Info -->
     <string name="info_kernel_version">Versi Kernel</string>
     <string name="info_system_version">Versi Sistem</string>
     <string name="info_selinux_status">Status SELinux</string>
@@ -49,6 +54,7 @@
     <string name="info_embedded">TERSEMAT</string>
     <string name="info_user">PENGGUNA %1$s</string>
     <string name="info_system">SISTEM</string>
+    <!-- Messages -->
     <string name="msg_no_module_loaded">Tidak ada modul dimuat</string>
     <string name="msg_no_app_found">Aplikasi tidak ditemukan</string>
     <string name="msg_no_module_found">Modul tidak ditemukan</string>
@@ -73,5 +79,6 @@
     <string name="msg_failed_get_module_info">Gagal mendapatkan info modul</string>
     <string name="msg_error_loading_apps">Error memuat aplikasi: </string>
     <string name="msg_error_rendering_apps">Error merender aplikasi: </string>
+    <string name="msg_invalid_char">Superkey mengandung karakter khusus: $ " ' [ ] `</string>
     <string name="msg_unknown">Tidak diketahui</string>
 </resources>

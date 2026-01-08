@@ -49,7 +49,7 @@ function updateSuperkey(key) {
     exec(`
         key="${key}"
         if [ -n "$key" ]; then
-            echo "$key" | base64 -w0 > /data/adb/kp-next/key
+            echo '${key}' | base64 -w0 > /data/adb/kp-next/key
             if [ -f "${modDir}/unresolved" ]; then
                 rm -f "${modDir}/unresolved"
                 busybox nohup sh "${modDir}/service.sh" &
@@ -61,8 +61,14 @@ function updateSuperkey(key) {
 }
 
 function updateBtnState(value) {
+    const isInvalid = /[$"'[\]`]/.test(value);
+    const field = document.querySelector('#superkey .password-field');
+
+    field.error = isInvalid;
+    field.errorText = isInvalid ? getString('msg_invalid_char') : '';
+
     document.querySelector('#superkey-dialog .confirm').disabled = !value;
-    document.getElementById('start').disabled = !value;
+    document.getElementById('start').disabled = !value || isInvalid;
 }
 
 export async function initInfo() {

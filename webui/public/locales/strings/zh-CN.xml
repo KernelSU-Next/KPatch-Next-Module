@@ -2,14 +2,15 @@
 <resources>
     <!-- UI Labels -->
     <string name="title_patch">修补</string>
-    <string name="title_unpatch">还原</string>
+    <string name="title_unpatch">取消修补</string>
     <string name="title_kpmodule">KPModule</string>
     <string name="title_exclude">排除</string>
     <string name="title_settings">设置</string>
     <string name="title_home">首页</string>
     <string name="title_language">语言</string>
-    <string name="title_clear_superkey">清除 SuperKey</string>
-    <string name="title_enter_superkey">输入 SuperKey</string>
+    <string name="title_superkey">超级密钥</string>
+    <string name="title_clear_superkey">清除超级密钥</string>
+    <string name="title_enter_superkey">输入超级密钥</string>
     <string name="title_control_kpmodule">控制 KPModule</string>
     <string name="title_select_language">选择语言</string>
     <string name="title_reboot">重启</string>
@@ -23,14 +24,14 @@
     <string name="button_uninstall">卸载</string>
     <string name="button_embed_kpm">嵌入 KPM</string>
     <string name="button_start">开始</string>
-    <string name="button_unpatch">还原</string>
+    <string name="button_unpatch">取消修补</string>
     <string name="button_cancel">取消</string>
     <string name="button_ok">确定</string>
     <string name="button_load">加载</string>
     <string name="button_unload">卸载</string>
     <string name="button_refresh">刷新</string>
     <!-- Labels -->
-    <string name="label_set_superkey">设置 SuperKey</string>
+    <string name="label_set_superkey">设置超级密钥</string>
     <string name="label_input_control_parameters">输入控制参数：</string>
     <string name="label_parameters">参数</string>
     <string name="label_load_temporarily">临时加载</string>
@@ -42,7 +43,7 @@
     <string name="status_working">运行中</string>
     <string name="status_not_installed_or_authenticated">未安装或未认证</string>
     <string name="status_authentication_failed">认证失败</string>
-    <string name="status_authentication_failed_desc">无法认证 SuperKey，因此 KPatch Next 无法正常工作。请重试。</string>
+    <string name="status_authentication_failed_desc">无法认证超级密钥，因此 KPatch Next 无法正常工作。请重试。</string>
     <string name="status_loading">加载中...</string>
     <!-- Info -->
     <string name="info_kernel_version">内核版本</string>
@@ -86,5 +87,6 @@
     <string name="msg_failed_get_module_info">获取模块信息失败</string>
     <string name="msg_error_loading_apps">加载应用时出错：</string>
     <string name="msg_error_rendering_apps">渲染应用时出错：</string>
+    <string name="msg_invalid_char">超级密钥包含特殊字符: $ " ' [ ] `</string>
     <string name="msg_unknown">未知</string>
 </resources>

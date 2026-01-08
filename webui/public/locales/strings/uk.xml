@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- UI Labels -->
+    <string name="title_exclude">Виключити</string>
+    <string name="title_settings">Налаштування</string>
+    <string name="title_home">Головна</string>
+    <string name="title_language">Мова</string>
+    <string name="title_clear_superkey">Очистити SuperKey</string>
+    <string name="title_enter_superkey">Введіть SuperKey</string>
+    <string name="title_control_kpmodule">Control KPModule</string>
+    <string name="title_select_language">Виберіть мову</string>
+    <string name="title_reboot">Перезавантаження</string>
+    <string name="title_reboot_recovery">Перезавантаження в Recovery</string>
+    <string name="title_reboot_bootloader">Перезавантаження в Bootloader</string>
+    <string name="title_reboot_download">Перезавантаження в Download</string>
+    <string name="title_reboot_edl">Перезавантаження в EDL</string>
+    <string name="title_kernel">Ядро</string>
+    <!-- Buttons -->
+    <string name="button_install">Натисніть, щоб встановити</string>
+    <string name="button_uninstall">Видалити</string>
+    <string name="button_embed_kpm">Вбудувати KPM</string>
+    <string name="button_start">Почати</string>
+    <string name="button_unpatch">Видалити</string>
+    <string name="button_cancel">Скасувати</string>
+    <string name="button_ok">ОК</string>
+    <string name="button_load">Завантажити</string>
+    <string name="button_unload">Розвантажити</string>
+    <string name="button_refresh">Оновити</string>
+    <!-- Labels -->
+    <string name="label_set_superkey">Встановіть SuperKey</string>
+    <string name="label_input_control_parameters">Вхідні параметри керування:</string>
+    <string name="label_parameters">Параметри</string>
+    <string name="label_load_temporarily">Тимчасово завантажити</string>
+    <string name="label_show_system_app">Показувати системні додатоки</string>
+    <string name="label_system_default">Системні за замовчуванням</string>
+    <string name="label_trigger_event">Тригерна подія</string>
+    <!-- Status -->
+    <string name="status_not_installed">Не встановлено</string>
+    <string name="status_working">Працює</string>
+    <string name="status_not_installed_or_authenticated">Не встановлено або не автентифіковано</string>
+    <string name="status_authentication_failed">Помилка автентифікації</string>
+    <string name="status_authentication_failed_desc">Не вдалося автентифікувати SuperKey, тому KPatch Next не може працювати належним чином. Спробуйте ще раз.</string>
+    <string name="status_loading">Завантаження...</string>
+    <!-- Info -->
+    <string name="info_kernel_version">Версія ядра</string>
+    <string name="info_system_version">Версія системи</string>
+    <string name="info_fingerprint">Фінгерпрінт</string>
+    <string name="info_selinux_status">Стан SELinux</string>
+    <string name="info_version">Версія: %1$s</string>
+    <string name="info_time">Час: %1$s</string>
+    <string name="info_config">Конфігурація: %1$s</string>
+    <string name="info_slot">Слот: %1$s</string>
+    <string name="info_device">Девайс: %1$s</string>
+    <string name="info_device_unknown">Девайс: Unknown</string>
+    <string name="info_author">Автор: %1$s</string>
+    <string name="info_args">Аргументи: %1$s</string>
+    <string name="info_no_description">Без опису</string>
+    <string name="info_embedded">ВБУДОВАНО</string>
+    <string name="info_user">ЮЗЕР %1$s</string>
+    <string name="info_system">СИСТЕМА</string>
+    <!-- Messages -->
+    <string name="msg_no_module_loaded">Модулі не завантажені</string>
+    <string name="msg_no_app_found">Не знайдено жодного додатка</string>
+    <string name="msg_no_module_found">Модуль не знайдено</string>
+    <string name="msg_clear_superkey_confirm">Ви справді хочете продовжити?</string>
+    <string name="msg_module_loaded">%1$s буде завантажено.</string>
+    <string name="msg_unload_module">Вивантажити модуль %1$s?</string>
+    <string name="msg_redirecting_to">Перенаправлення на %1$s</string>
+    <string name="msg_failed_open_link">Не вдалося відкрити посилання за допомогою exec</string>
+    <string name="msg_failed_parse_kernel">Не вдалося проаналізувати ядро:</string>
+    <string name="msg_boot_extract_failed">Не вдалося витягнути завантажувальний файл</string>
+    <string name="msg_failed_locate_boot">Не вдалося знайти завантажувальний образ</string>
+    <string name="msg_invalid_kpm_file">Недійсний файл KPM</string>
+    <string name="msg_could_not_parse_kpm">Не вдалося проаналізувати інформацію KPM</string>
+    <string name="msg_error_no_boot_image">Помилка: Не знайдено завантажувального образу.</string>
+    <string name="msg_please_select_file">Будь ласка, виберіть файл %1$s</string>
+    <string name="msg_please_wait">Будь ласка, зачекайте...</string>
+    <string name="msg_uploading">Завантаження... </string>
+    <string name="msg_upload_cancelled">Завантаження скасовано</string>
+    <string name="msg_error">Помилка: %1$s</string>
+    <string name="msg_successfully_loaded">Успішно завантажено %1$s</string>
+    <string name="msg_failed_load_module">Не вдалося завантажити модуль %1$s</string>
+    <string name="msg_failed_get_module_info">Не вдалося отримати інформацію про модуль</string>
+    <string name="msg_error_loading_apps">Помилка завантаження програм: </string>
+    <string name="msg_error_rendering_apps">Помилка рендерингу програм: </string>
+    <string name="msg_invalid_char">Superkey містить спеціальні символи: $ " ' [ ] `</string>
+    <string name="msg_unknown">Невідомо</string>
+</resources>
