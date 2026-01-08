@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Etichette UI -->
+    <string name="title_patch">Patch</string>
+    <string name="title_unpatch">UnPatch</string>
+    <string name="title_kpmodule">KPModule</string>
+    <string name="title_exclude">Escludi</string>
+    <string name="title_settings">Impostazioni</string>
+    <string name="title_home">Home</string>
+    <string name="title_language">Lingua</string>
+    <string name="title_superkey">SuperKey</string>
+    <string name="title_clear_superkey">Cancella SuperKey</string>
+    <string name="title_enter_superkey">Inserisci SuperKey</string>
+    <string name="title_control_kpmodule">Controllo KPModule</string>
+    <string name="title_select_language">Seleziona Lingua</string>
+    <string name="title_reboot">Riavvia</string>
+    <string name="title_reboot_recovery">Riavvia in Recovery</string>
+    <string name="title_reboot_bootloader">Riavvia in Bootloader</string>
+    <string name="title_reboot_download">Riavvia in Download</string>
+    <string name="title_reboot_edl">Riavvia in EDL</string>
+    <string name="title_kernel">Kernel</string>
+    <!-- Pulsanti -->
+    <string name="button_install">Clicca per installare</string>
+    <string name="button_uninstall">Disinstalla</string>
+    <string name="button_embed_kpm">Incorpora KPM</string>
+    <string name="button_start">Inizio</string>
+    <string name="button_unpatch">UnPatch</string>
+    <string name="button_cancel">Cancella</string>
+    <string name="button_ok">OK</string>
+    <string name="button_load">Caricare</string>
+    <string name="button_unload">Smontare</string>
+    <string name="button_refresh">Aggiorna</string>
+    <!-- Etichette -->
+    <string name="label_set_superkey">Imposta SuperKey</string>
+    <string name="label_input_control_parameters">Parametri di controllo input:</string>
+    <string name="label_parameters">Parametri</string>
+    <string name="label_load_temporarily">Carica temporaneamente</string>
+    <string name="label_show_system_app">Mostra app di sistema</string>
+    <string name="label_system_default">Predefinito di sistema</string>
+    <string name="label_trigger_event">Evento di attivazione</string>
+    <!-- Stato -->
+    <string name="status_not_installed">Non installato</string>
+    <string name="status_working">Lavorando 😋</string>
+    <string name="status_not_installed_or_authenticated">Non installato o autenticato</string>
+    <string name="status_authentication_failed">Autenticazione fallita</string>
+    <string name="status_authentication_failed_desc">Impossibile autenticare la SuperKey, pertanto KPatch Next non può funzionare correttamente. Riprova.</string>
+    <string name="status_loading">Caricamento...</string>
+    <!-- Info -->
+    <string name="info_kernel_version">Versione Kernel </string>
+    <string name="info_system_version">Versione Sistema</string>
+    <string name="info_fingerprint">Fingerprint</string>
+    <string name="info_selinux_status">Stato SELinux</string>
+    <string name="info_version">Versione: %1$s</string>
+    <string name="info_time">Tempo: %1$s</string>
+    <string name="info_config">Config: %1$s</string>
+    <string name="info_slot">Slot: %1$s</string>
+    <string name="info_device">Dispositivo: %1$s</string>
+    <string name="info_device_unknown">Dispositivo: Sconosciuto</string>
+    <string name="info_author">Autore: %1$s</string>
+    <string name="info_args">Argomenti: %1$s</string>
+    <string name="info_no_description">Nessuna descrizione</string>
+    <string name="info_embedded">INCORPORATO</string>
+    <string name="info_user">UTENTE %1$s</string>
+    <string name="info_system">SISTEMA</string>
+    <!-- Messaggi -->
+    <string name="msg_no_module_loaded">Nessun modulo caricato</string>
+    <string name="msg_no_app_found">Nessuna app trovata</string>
+    <string name="msg_no_module_found">Nessun modulo trovato</string>
+    <string name="msg_clear_superkey_confirm">Vuoi davvero procedere?</string>
+    <string name="msg_module_loaded">%1$s verrà caricato.</string>
+    <string name="msg_unload_module">Smontare il modulo %1$s ?</string>
+    <string name="msg_redirecting_to">Reindirizzamento a %1$s</string>
+    <string name="msg_failed_open_link">Impossibile aprire il collegamento con exec</string>
+    <string name="msg_failed_parse_kernel">Impossibile analizzare il kernel:</string>
+    <string name="msg_boot_extract_failed">Estrazione boot non riuscita</string>
+    <string name="msg_failed_locate_boot">Impossibile trovare l'immagine boot</string>
+    <string name="msg_invalid_kpm_file">File KPM non valido</string>
+    <string name="msg_could_not_parse_kpm">Impossibile analizzare le info KPM</string>
+    <string name="msg_error_no_boot_image">Errore: nessuna immagine boot trovata.</string>
+    <string name="msg_please_select_file">Seleziona un file %1$s</string>
+    <string name="msg_please_wait">Attendere prego...</string>
+    <string name="msg_uploading">Caricamento in corso... </string>
+    <string name="msg_upload_cancelled">Caricamento annullato</string>
+    <string name="msg_error">Errore: %1$s</string>
+    <string name="msg_successfully_loaded">Caricamento di %1$s riuscito</string>
+    <string name="msg_failed_load_module">Impossibile caricare il modulo %1$s</string>
+    <string name="msg_failed_get_module_info">Impossibile ottenere le info sul modulo</string>
+    <string name="msg_error_loading_apps">Errore durante il caricamento delle app: </string>
+    <string name="msg_error_rendering_apps">Errore durante il rendering delle app: </string>
+    <string name="msg_invalid_char">Superkey contiene caratteri speciali: $ " ' [ ] `</string>
+    <string name="msg_unknown">Sconosciuto</string>
+</resources>
