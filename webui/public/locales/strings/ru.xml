@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- UI Labels -->
-    <string name="title_patch">Patch</string>
-    <string name="title_unpatch">UnPatch</string>
-    <string name="title_kpmodule">KPModule</string>
     <string name="title_exclude">Исключения</string>
     <string name="title_settings">Настройки</string>
     <string name="title_home">Главная</string>
