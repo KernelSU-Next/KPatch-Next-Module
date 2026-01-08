@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Etichette UI -->
-    <string name="title_patch">Patch</string>
-    <string name="title_unpatch">UnPatch</string>
-    <string name="title_kpmodule">KPModule</string>
+    <!-- UI Labels -->
     <string name="title_exclude">Escludi</string>
     <string name="title_settings">Impostazioni</string>
-    <string name="title_home">Home</string>
     <string name="title_language">Lingua</string>
-    <string name="title_superkey">SuperKey</string>
     <string name="title_clear_superkey">Cancella SuperKey</string>
     <string name="title_enter_superkey">Inserisci SuperKey</string>
     <string name="title_control_kpmodule">Controllo KPModule</string>
@@ -18,8 +13,7 @@
     <string name="title_reboot_bootloader">Riavvia in Bootloader</string>
     <string name="title_reboot_download">Riavvia in Download</string>
     <string name="title_reboot_edl">Riavvia in EDL</string>
-    <string name="title_kernel">Kernel</string>
-    <!-- Pulsanti -->
+    <!-- Buttons -->
     <string name="button_install">Clicca per installare</string>
     <string name="button_uninstall">Disinstalla</string>
     <string name="button_embed_kpm">Incorpora KPM</string>
@@ -30,7 +24,7 @@
     <string name="button_load">Caricare</string>
     <string name="button_unload">Smontare</string>
     <string name="button_refresh">Aggiorna</string>
-    <!-- Etichette -->
+    <!-- Labels -->
     <string name="label_set_superkey">Imposta SuperKey</string>
     <string name="label_input_control_parameters">Parametri di controllo input:</string>
     <string name="label_parameters">Parametri</string>
@@ -38,7 +32,7 @@
     <string name="label_show_system_app">Mostra app di sistema</string>
     <string name="label_system_default">Predefinito di sistema</string>
     <string name="label_trigger_event">Evento di attivazione</string>
-    <!-- Stato -->
+    <!-- Status -->
     <string name="status_not_installed">Non installato</string>
     <string name="status_working">Lavorando 😋</string>
     <string name="status_not_installed_or_authenticated">Non installato o autenticato</string>
@@ -62,7 +56,7 @@
     <string name="info_embedded">INCORPORATO</string>
     <string name="info_user">UTENTE %1$s</string>
     <string name="info_system">SISTEMA</string>
-    <!-- Messaggi -->
+    <!-- Messages -->
     <string name="msg_no_module_loaded">Nessun modulo caricato</string>
     <string name="msg_no_app_found">Nessuna app trovata</string>
     <string name="msg_no_module_found">Nessun modulo trovato</string>
