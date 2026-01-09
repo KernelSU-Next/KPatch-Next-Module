@@ -9,10 +9,10 @@
     <string name="title_home">Home</string>
     <string name="title_language">Sprache</string>
     <string name="title_superkey">Superschlüssel</string>
-    <string name="title_clear_superkey">Superschlssel löschen</string>
+    <string name="title_clear_superkey">Superschlüssel löschen</string>
     <string name="title_enter_superkey">Superschlüssel eingeben</string>
     <string name="title_control_kpmodule">KPModule kontrollieren</string>
-    <string name="title_select_language">Sprache whälen</string>
+    <string name="title_select_language">Sprache wählen</string>
     <string name="title_reboot">Neustarten</string>
     <string name="title_reboot_recovery">Neustart in Recovery Modus</string>
     <string name="title_reboot_bootloader">Neustart in Bootloader Modus</string>
@@ -43,7 +43,7 @@
     <string name="status_working">Funktioniert 😋</string>
     <string name="status_not_installed_or_authenticated">Unbekannt</string>
     <string name="status_authentication_failed">Authentifizierung fehlgeschlagen</string>
-    <string name="status_authentication_failed_desc">Superschlüssel konnte ncht authentifiziert werden, daher kann KPatch Next nicht richtig funktionieren. Bitte nochmal versuchen.</string>
+    <string name="status_authentication_failed_desc">Superschlüssel konnte nicht authentifiziert werden, daher kann KPatch Next nicht richtig funktionieren. Bitte nochmal versuchen.</string>
     <string name="status_loading">Laden...</string>
     <!-- Info -->
     <string name="info_kernel_version">Kernelversion</string>
@@ -70,7 +70,7 @@
     <string name="msg_module_loaded">%1$s wird geladen.</string>
     <string name="msg_unload_module">Modul %1$s entladen?</string>
     <string name="msg_redirecting_to">Leite weiter zu %1$s</string>
-    <string name="msg_failed_open_link">Konnte link nichtmit exec öffnen</string>
+    <string name="msg_failed_open_link">Konnte link nicht mit exec öffnen</string>
     <string name="msg_failed_parse_kernel">Konnte Kernel nicht parsen:</string>
     <string name="msg_boot_extract_failed">Konnte Boot nicht extrahieren</string>
     <string name="msg_failed_locate_boot">Konnte Boot Abbild nicht finden</string>
@@ -80,12 +80,12 @@
     <string name="msg_please_select_file">Wählen sie eine %1$s Datei</string>
     <string name="msg_please_wait">Bitte Warten...</string>
     <string name="msg_uploading">Laden... </string>
-    <string name="msg_upload_cancelled">Laden aabgebrochen</string>
+    <string name="msg_upload_cancelled">Laden abgebrochen</string>
     <string name="msg_error">Fehler: %1$s</string>
     <string name="msg_successfully_loaded">Erfolgreich geladen %1$s</string>
     <string name="msg_failed_load_module">Konnte Modul %1$s nicht laden</string>
     <string name="msg_failed_get_module_info">Konnte Modul Info nicht finden</string>
-    <string name="msg_error_loading_apps">Fehler beim Laden der Apps: </string>
-    <string name="msg_error_rendering_apps">Gehler beim Auflisten der Apps: </string>
-    <string name="msg_unknown">Unknown</string>
+    <string name="msg_error_loading_apps">Fehler beim laden der Apps: </string>
+    <string name="msg_error_rendering_apps"Fehler beim auflisten der Apps: </string>
+    <string name="msg_unknown">Ubekannt</string>
 </resources>
