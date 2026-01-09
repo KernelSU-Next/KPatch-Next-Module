@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- UI Labels -->
+    <string name="title_patch">修補</string>
+    <string name="title_unpatch">還原</string>
+    <string name="title_exclude">排除</string>
+    <string name="title_settings">設置</string>
+    <string name="title_home">首頁</string>
+    <string name="title_language">語言</string>
+    <string name="title_clear_superkey">清除 SuperKey</string>
+    <string name="title_enter_superkey">輸入 SuperKey</string>
+    <string name="title_control_kpmodule">控制 KPModule</string>
+    <string name="title_select_language">選擇語言</string>
+    <string name="title_reboot">重啟</string>
+    <string name="title_reboot_recovery">重啟到 Recovery</string>
+    <string name="title_reboot_bootloader">重啟到 Bootloader</string>
+    <string name="title_reboot_download">重啟到 Download</string>
+    <string name="title_reboot_edl">重啟到 EDL</string>
+    <string name="title_kernel">內核</string>
+    <!-- Buttons -->
+    <string name="button_install">點擊安裝</string>
+    <string name="button_uninstall">卸載</string>
+    <string name="button_embed_kpm">嵌入 KPM</string>
+    <string name="button_start">開始</string>
+    <string name="button_unpatch">還原</string>
+    <string name="button_cancel">取消</string>
+    <string name="button_ok">確定</string>
+    <string name="button_load">加載</string>
+    <string name="button_unload">卸載</string>
+    <string name="button_refresh">刷新</string>
+    <!-- Labels -->
+    <string name="label_set_superkey">設置 SuperKey</string>
+    <string name="label_input_control_parameters">輸入控制參數：</string>
+    <string name="label_parameters">參數</string>
+    <string name="label_load_temporarily">臨時加載</string>
+    <string name="label_show_system_app">顯示系統應用</string>
+    <string name="label_system_default">系統默認</string>
+    <string name="label_trigger_event">觸發事件</string>
+    <!-- Status -->
+    <string name="status_not_installed">未安裝</string>
+    <string name="status_working">工作中 😋</string>
+    <string name="status_not_installed_or_authenticated">未安裝或未認證</string>
+    <string name="status_authentication_failed">認證失敗</string>
+    <string name="status_authentication_failed_desc">無法認證 SuperKey，因此 KPatch Next 無法正常工作，請重試</string>
+    <string name="status_loading">加載中...</string>
+    <!-- Info -->
+    <string name="info_kernel_version">內核版本</string>
+    <string name="info_system_version">系統版本</string>
+    <string name="info_fingerprint">指紋</string>
+    <string name="info_selinux_status">SELinux 狀態</string>
+    <string name="info_version">版本: %1$s</string>
+    <string name="info_time">時間: %1$s</string>
+    <string name="info_config">配置: %1$s</string>
+    <string name="info_slot">插槽: %1$s</string>
+    <string name="info_device">設備: %1$s</string>
+    <string name="info_device_unknown">設備: 未知</string>
+    <string name="info_author">作者: %1$s</string>
+    <string name="info_args">參數: %1$s</string>
+    <string name="info_no_description">與描述</string>
+    <string name="info_embedded">已嵌入</string>
+    <string name="info_user">用戶 %1$s</string>
+    <string name="info_system">系統</string>
+    <!-- Messages -->
+    <string name="msg_no_module_loaded">未加載模塊</string>
+    <string name="msg_no_app_found">未發現應用</string>
+    <string name="msg_no_module_found">未發現模塊</string>
+    <string name="msg_clear_superkey_confirm">你確定要繼續嗎？</string>
+    <string name="msg_module_loaded">%1$s 將被加載</string>
+    <string name="msg_unload_module">卸載 %1$s 模塊？</string>
+    <string name="msg_redirecting_to">正在跳轉到 %1$s</string>
+    <string name="msg_failed_open_link">exec 打開鏈接失敗</string>
+    <string name="msg_failed_parse_kernel">解析內核失敗：</string>
+    <string name="msg_boot_extract_failed">提取 Boot 失敗</string>
+    <string name="msg_failed_locate_boot">無法定位 Boot 鏡像</string>
+    <string name="msg_invalid_kpm_file">無效的 KPM 文件</string>
+    <string name="msg_could_not_parse_kpm">無法解析 KPM 信息</string>
+    <string name="msg_error_no_boot_image">錯誤：找不到 Boot 鏡像</string>
+    <string name="msg_please_select_file">請選擇 %1$s 文件</string>
+    <string name="msg_please_wait">請稍後...</string>
+    <string name="msg_uploading">正在上傳...</string>
+    <string name="msg_upload_cancelled">上傳已取消</string>
+    <string name="msg_error">錯誤：%1$s</string>
+    <string name="msg_successfully_loaded">成功加載 %1$s</string>
+    <string name="msg_failed_load_module">加載模塊 %1$s 失敗</string>
+    <string name="msg_failed_get_module_info">獲取模塊信息</string>
+    <string name="msg_error_loading_apps">加載應用時失敗：</string>
+    <string name="msg_error_rendering_apps">渲染應用時出錯：</string>
+    <string name="msg_unknown">未知</string>
+</resources>
