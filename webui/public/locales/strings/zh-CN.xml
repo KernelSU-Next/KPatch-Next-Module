@@ -87,6 +87,5 @@
     <string name="msg_failed_get_module_info">获取模块信息失败</string>
     <string name="msg_error_loading_apps">加载应用时出错：</string>
     <string name="msg_error_rendering_apps">渲染应用时出错：</string>
-    <string name="msg_invalid_char">超级密钥包含特殊字符: $ " ' [ ] `</string>
     <string name="msg_unknown">未知</string>
 </resources>

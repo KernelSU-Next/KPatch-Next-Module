@@ -83,6 +83,5 @@
     <string name="msg_failed_get_module_info">Не удалось получить информацию о модуле</string>
     <string name="msg_error_loading_apps">Ошибка загрузки приложений: </string>
     <string name="msg_error_rendering_apps">Ошибка отображения приложений: </string>
-    <string name="msg_invalid_char">Superkey содержит специальные символы: $ " ' [ ] `</string>
     <string name="msg_unknown">Неизвестно</string>
 </resources>

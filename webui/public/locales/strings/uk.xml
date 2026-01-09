@@ -83,6 +83,5 @@
     <string name="msg_failed_get_module_info">Не вдалося отримати інформацію про модуль</string>
     <string name="msg_error_loading_apps">Помилка завантаження програм: </string>
     <string name="msg_error_rendering_apps">Помилка рендерингу програм: </string>
-    <string name="msg_invalid_char">Superkey містить спеціальні символи: $ " ' [ ] `</string>
     <string name="msg_unknown">Невідомо</string>
 </resources>

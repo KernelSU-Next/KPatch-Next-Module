@@ -87,6 +87,5 @@
     <string name="msg_failed_get_module_info">Failed to get module info</string>
     <string name="msg_error_loading_apps">Error loading apps: </string>
     <string name="msg_error_rendering_apps">Error rendering apps: </string>
-    <string name="msg_invalid_char">Superkey contains special characters: $ " ' [ ] `</string>
     <string name="msg_unknown">Unknown</string>
 </resources>

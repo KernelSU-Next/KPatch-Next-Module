@@ -79,6 +79,5 @@
     <string name="msg_failed_get_module_info">Gagal mendapatkan info modul</string>
     <string name="msg_error_loading_apps">Error memuat aplikasi: </string>
     <string name="msg_error_rendering_apps">Error merender aplikasi: </string>
-    <string name="msg_invalid_char">Superkey mengandung karakter khusus: $ " ' [ ] `</string>
     <string name="msg_unknown">Tidak diketahui</string>
 </resources>
