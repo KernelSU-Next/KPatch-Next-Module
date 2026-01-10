@@ -8,9 +8,6 @@
     <string name="title_settings">Settings</string>
     <string name="title_home">Home</string>
     <string name="title_language">Language</string>
-    <string name="title_superkey">SuperKey</string>
-    <string name="title_clear_superkey">Clear SuperKey</string>
-    <string name="title_enter_superkey">Enter SuperKey</string>
     <string name="title_control_kpmodule">Control KPModule</string>
     <string name="title_select_language">Select Language</string>
     <string name="title_reboot">Reboot</string>
@@ -32,7 +29,6 @@
     <string name="button_unload">Unload</string>
     <string name="button_refresh">Refresh</string>
     <!-- Labels -->
-    <string name="label_set_superkey">Set SuperKey</string>
     <string name="label_input_control_parameters">Input control parameters:</string>
     <string name="label_parameters">Parameters</string>
     <string name="label_load_temporarily">Load temporarily</string>
@@ -45,9 +41,6 @@
     <!-- Status -->
     <string name="status_not_installed">Not installed</string>
     <string name="status_working">Working 😋</string>
-    <string name="status_not_installed_or_authenticated">Not installed or authenticated</string>
-    <string name="status_authentication_failed">Authentication failed</string>
-    <string name="status_authentication_failed_desc">Unable to authenticate the SuperKey, therefore KPatch Next cannot work properly. Please try again.</string>
     <string name="status_loading">Loading...</string>
     <!-- Info -->
     <string name="info_kernel_version">Kernel version</string>
@@ -70,7 +63,6 @@
     <string name="msg_no_module_loaded">No module loaded</string>
     <string name="msg_no_app_found">No app found</string>
     <string name="msg_no_module_found">No module found</string>
-    <string name="msg_clear_superkey_confirm">Do you really want to proceed?</string>
     <string name="msg_module_loaded">%1$s will be loaded.</string>
     <string name="msg_unload_module">Unload %1$s module?</string>
     <string name="msg_redirecting_to">Redirecting to %1$s</string>

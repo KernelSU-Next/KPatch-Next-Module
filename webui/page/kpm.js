@@ -1,5 +1,5 @@
 import { exec, spawn, toast } from 'kernelsu-alt';
-import { modDir, persistDir, superkey, initInfo, MAX_CHUNK_SIZE, linkRedirect, escapeShell } from '../index.js';
+import { modDir, persistDir, initInfo, MAX_CHUNK_SIZE, linkRedirect } from '../index.js';
 import { getString } from '../language.js';
 
 let allKpms = [];
@@ -45,14 +45,11 @@ async function getKpmList() {
         ];
     }
 
-    const listResult = await exec(
-        `kpatch ${escapeShell(superkey)} kpm list && sh "${modDir}/status.sh" ${escapeShell(superkey)}`,
-        { env: { PATH: `${modDir}/bin:$PATH` } }
-    );
+    const listResult = await exec(`kpatch kpm list && sh "${modDir}/status.sh"`, { env: { PATH: `${modDir}/bin:$PATH` } });
     const modules = listResult.stdout.trim().split('\n').filter(line => line.trim());
 
     const modulePromises = modules.map(async (moduleName) => {
-        const infoResult = await exec(`kpatch ${escapeShell(superkey)} kpm info "${moduleName}"`, { env: { PATH: `${modDir}/bin` } });
+        const infoResult = await exec(`kpatch kpm info "${moduleName}"`, { env: { PATH: `${modDir}/bin` } });
         const infoLines = infoResult.stdout.trim().split('\n');
 
         const moduleInfo = {};
@@ -69,7 +66,7 @@ async function getKpmList() {
 }
 
 async function controlModule(moduleName, action) {
-    const result = await exec(`kpatch ${escapeShell(superkey)} kpm ctl0 "${moduleName}" ${action}`, { env: { PATH: `${modDir}/bin` } });
+    const result = await exec(`kpatch kpm ctl0 "${moduleName}" ${action}`, { env: { PATH: `${modDir}/bin` } });
     toast(result.errno === 0 ? result.stdout : result.stderr);
 }
 
@@ -79,12 +76,12 @@ function forgetModule(moduleName) {
 
 async function unloadModule(moduleName) {
     forgetModule(moduleName);
-    const result = await exec(`kpatch ${escapeShell(superkey)} kpm unload "${moduleName}"`, { env: { PATH: `${modDir}/bin` } });
+    const result = await exec(`kpatch kpm unload "${moduleName}"`, { env: { PATH: `${modDir}/bin` } });
     return result.errno === 0;
 }
 
 async function loadModule(modulePath) {
-    const result = await exec(`kpatch ${escapeShell(superkey)} kpm load "${modulePath}"`, { env: { PATH: `${modDir}/bin` } });
+    const result = await exec(`kpatch kpm load "${modulePath}"`, { env: { PATH: `${modDir}/bin` } });
     return result.errno === 0;
 }
 

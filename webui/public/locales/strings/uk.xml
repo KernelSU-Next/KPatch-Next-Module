@@ -5,8 +5,6 @@
     <string name="title_settings">Налаштування</string>
     <string name="title_home">Головна</string>
     <string name="title_language">Мова</string>
-    <string name="title_clear_superkey">Очистити SuperKey</string>
-    <string name="title_enter_superkey">Введіть SuperKey</string>
     <string name="title_control_kpmodule">Control KPModule</string>
     <string name="title_select_language">Виберіть мову</string>
     <string name="title_reboot">Перезавантаження</string>
@@ -27,7 +25,6 @@
     <string name="button_unload">Розвантажити</string>
     <string name="button_refresh">Оновити</string>
     <!-- Labels -->
-    <string name="label_set_superkey">Встановіть SuperKey</string>
     <string name="label_input_control_parameters">Вхідні параметри керування:</string>
     <string name="label_parameters">Параметри</string>
     <string name="label_load_temporarily">Тимчасово завантажити</string>
@@ -37,9 +34,6 @@
     <!-- Status -->
     <string name="status_not_installed">Не встановлено</string>
     <string name="status_working">Працює 😋</string>
-    <string name="status_not_installed_or_authenticated">Не встановлено або не автентифіковано</string>
-    <string name="status_authentication_failed">Помилка автентифікації</string>
-    <string name="status_authentication_failed_desc">Не вдалося автентифікувати SuperKey, тому KPatch Next не може працювати належним чином. Спробуйте ще раз.</string>
     <string name="status_loading">Завантаження...</string>
     <!-- Info -->
     <string name="info_kernel_version">Версія ядра</string>
@@ -62,7 +56,6 @@
     <string name="msg_no_module_loaded">Модулі не завантажені</string>
     <string name="msg_no_app_found">Не знайдено жодного додатка</string>
     <string name="msg_no_module_found">Модуль не знайдено</string>
-    <string name="msg_clear_superkey_confirm">Ви справді хочете продовжити?</string>
     <string name="msg_module_loaded">%1$s буде завантажено.</string>
     <string name="msg_unload_module">Вивантажити модуль %1$s?</string>
     <string name="msg_redirecting_to">Перенаправлення на %1$s</string>

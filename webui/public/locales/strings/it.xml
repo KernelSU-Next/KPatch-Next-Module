@@ -4,8 +4,6 @@
     <string name="title_exclude">Escludi</string>
     <string name="title_settings">Impostazioni</string>
     <string name="title_language">Lingua</string>
-    <string name="title_clear_superkey">Cancella SuperKey</string>
-    <string name="title_enter_superkey">Inserisci SuperKey</string>
     <string name="title_control_kpmodule">Controllo KPModule</string>
     <string name="title_select_language">Seleziona Lingua</string>
     <string name="title_reboot">Riavvia</string>
@@ -25,7 +23,6 @@
     <string name="button_unload">Smontare</string>
     <string name="button_refresh">Aggiorna</string>
     <!-- Labels -->
-    <string name="label_set_superkey">Imposta SuperKey</string>
     <string name="label_input_control_parameters">Parametri di controllo input:</string>
     <string name="label_parameters">Parametri</string>
     <string name="label_load_temporarily">Carica temporaneamente</string>
@@ -35,9 +32,6 @@
     <!-- Status -->
     <string name="status_not_installed">Non installato</string>
     <string name="status_working">Lavorando 😋</string>
-    <string name="status_not_installed_or_authenticated">Non installato o autenticato</string>
-    <string name="status_authentication_failed">Autenticazione fallita</string>
-    <string name="status_authentication_failed_desc">Impossibile autenticare la SuperKey, pertanto KPatch Next non può funzionare correttamente. Riprova.</string>
     <string name="status_loading">Caricamento...</string>
     <!-- Info -->
     <string name="info_kernel_version">Versione Kernel </string>
@@ -60,7 +54,6 @@
     <string name="msg_no_module_loaded">Nessun modulo caricato</string>
     <string name="msg_no_app_found">Nessuna app trovata</string>
     <string name="msg_no_module_found">Nessun modulo trovato</string>
-    <string name="msg_clear_superkey_confirm">Vuoi davvero procedere?</string>
     <string name="msg_module_loaded">%1$s verrà caricato.</string>
     <string name="msg_unload_module">Smontare il modulo %1$s ?</string>
     <string name="msg_redirecting_to">Reindirizzamento a %1$s</string>
@@ -81,6 +74,5 @@
     <string name="msg_failed_get_module_info">Impossibile ottenere le info sul modulo</string>
     <string name="msg_error_loading_apps">Errore durante il caricamento delle app: </string>
     <string name="msg_error_rendering_apps">Errore durante il rendering delle app: </string>
-    <string name="msg_invalid_char">Superkey contiene caratteri speciali: $ " ' [ ] `</string>
     <string name="msg_unknown">Sconosciuto</string>
 </resources>

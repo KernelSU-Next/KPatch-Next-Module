@@ -5,8 +5,6 @@
     <string name="title_settings">Configurações</string>
     <string name="title_home">Início</string>
     <string name="title_language">Idioma</string>
-    <string name="title_clear_superkey">Limpar SuperKey</string>
-    <string name="title_enter_superkey">Inserir SuperKey</string>
     <string name="title_control_kpmodule">Controlar KPModule</string>
     <string name="title_select_language">Selecionar idioma</string>
     <string name="title_reboot">Reiniciar</string>
@@ -25,7 +23,6 @@
     <string name="button_unload">Descarregar</string>
     <string name="button_refresh">Atualizar</string>
     <!-- Labels -->
-    <string name="label_set_superkey">Definir SuperKey</string>
     <string name="label_input_control_parameters">Inserir parâmetros de controle:</string>
     <string name="label_parameters">Parâmetros</string>
     <string name="label_load_temporarily">Carregar temporariamente</string>
@@ -35,9 +32,6 @@
     <!-- Status -->
     <string name="status_not_installed">Não instalado</string>
     <string name="status_working">Em operação 😋</string>
-    <string name="status_not_installed_or_authenticated">Não instalado ou não autenticado</string>
-    <string name="status_authentication_failed">Falha de autenticação</string>
-    <string name="status_authentication_failed_desc">A SuperKey não pôde ser autenticada; o KPatch Next não pode operar corretamente. Tente novamente.</string>
     <string name="status_loading">Carregando...</string>
     <!-- Info -->
     <string name="info_kernel_version">Versão do kernel</string>
@@ -60,7 +54,6 @@
     <string name="msg_no_module_loaded">Nenhum módulo carregado</string>
     <string name="msg_no_app_found">Nenhum app encontrado</string>
     <string name="msg_no_module_found">Nenhum módulo encontrado</string>
-    <string name="msg_clear_superkey_confirm">Confirmar procedimento?</string>
     <string name="msg_module_loaded">%1$s será carregado.</string>
     <string name="msg_unload_module">Descarregar módulo %1$s?</string>
     <string name="msg_redirecting_to">Redirecionando para %1$s</string>

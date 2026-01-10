@@ -1,5 +1,5 @@
 import { listPackages, getPackagesInfo, exec } from 'kernelsu-alt';
-import { modDir, persistDir, superkey, escapeShell } from '../index.js';
+import { modDir, persistDir } from '../index.js';
 import { getString } from '../language.js';
 import fallbackIcon from '../icon.png';
 
@@ -217,7 +217,7 @@ async function renderAppList() {
                     saveTimeout = setTimeout(() => {
                         saveExcludedList(excludedApps);
                     }, 500);
-                    exec(`kpatch ${escapeShell(superkey)} exclude_set ${realUid} ${isSelected ? 1 : 0}`, { env: { PATH: `${modDir}/bin` } });
+                    exec(`kpatch exclude_set ${realUid} ${isSelected ? 1 : 0}`, { env: { PATH: `${modDir}/bin` } });
                 });
 
                 appItemMap.set(appKey, item);

@@ -1,5 +1,5 @@
 import { exec, spawn, toast } from 'kernelsu-alt';
-import { modDir, superkey, escapeShell } from '../index.js';
+import { modDir, escapeShell } from '../index.js';
 import { handleFileUpload, uploadFile } from './kpm.js';
 import { getString } from '../language.js';
 
@@ -37,18 +37,17 @@ function parseIni(str) {
 }
 
 async function getInstalledVersion() {
-    if (superkey === '') return null;
     if (import.meta.env.DEV) return uInt2String('c06');
-    const working = await exec(`kpatch ${escapeShell(superkey)} hello`, { env: { PATH: `${modDir}/bin` } });
+    const working = await exec(`kpatch hello`, { env: { PATH: `${modDir}/bin` } });
     if (working.stdout.trim() === '') return null;
-    const version = await exec(`kpatch ${escapeShell(superkey)} kpver`, { env: { PATH: `${modDir}/bin` } });
+    const version = await exec(`kpatch kpver`, { env: { PATH: `${modDir}/bin` } });
     return uInt2String(version.stdout.trim());
 }
 
 let bootSlot = '';
 let bootDev = '';
 let kimgInfo = { banner: '', patched: false };
-let kpimgInfo = { version: '', compile_time: '', config: '', superKey: '' };
+let kpimgInfo = { version: '', compile_time: '', config: '' };
 let existedExtras = [];
 let newExtras = [];
 
@@ -115,13 +114,6 @@ async function parseBootimg() {
         document.getElementById('kernel').classList.remove('animate-hidden');
 
         if (kimgInfo.patched && ini.kpimg) {
-            const key = ini.kpimg.superkey || '';
-            kpimgInfo.superKey = key;
-
-            if (key.length > 0) {
-                document.getElementById('superkey').value = key;
-            }
-
             // Parse extras
             existedExtras = [];
             let kpmNum = parseInt(ini.kernel.extra_num);
@@ -320,7 +312,6 @@ async function embedKPM() {
 }
 
 function patch(type) {
-    const superkeyVal = document.querySelector('#superkey md-outlined-text-field').value;
     const terminal = document.querySelector('#patch-terminal');
     const pageContent = terminal.closest('.page-content');
     const onOutput = (data) => {
@@ -337,7 +328,6 @@ function patch(type) {
     if (type === "patch") {
         args.push(
             `${modDir}/boot_patch.sh`,
-            escapeShell(superkeyVal),
             bootDev,
             'true'
         );

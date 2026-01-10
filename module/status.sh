@@ -3,7 +3,6 @@
 MODDIR="/data/adb/modules/KPatch-Next"
 KPNDIR="/data/adb/kp-next"
 PATH="$MODDIR/bin:$PATH"
-key="$1"
 
 PROP_FILE="$MODDIR/module.prop"
 PROP_BAK="$PROP_FILE.bak"
@@ -35,20 +34,18 @@ fi
 
 active="Status: active 😊"
 inactive="Status: inactive 😕"
-info="info: key incorrect, not set or kernel not patched yet ❌"
+info="info: kernel not patched yet ❌"
 string="$inactive | $info"
-
-[ -z "$key" ] && key="$(cat $KPNDIR/key | base64 -d)"
 
 until [ "$(getprop sys.boot_completed)" = "1" ]; do
     sleep 1
 done
 
-if [ -n "$key" ] && kpatch "$key" hello >/dev/null 2>&1; then
-    KPM_COUNT="$(kpatch "$key" kpm num 2>/dev/null || echo 0)"
+if kpatch hello >/dev/null 2>&1; then
+    KPM_COUNT="$(kpatch kpm num 2>/dev/null || echo 0)"
     [ -z "$KPM_COUNT" ] && KPM_COUNT=0
 
-    REHOOK_MODE="$(kpatch "$key" rehook_status 2>/dev/null | awk '{print $NF}')"
+    REHOOK_MODE="$(kpatch rehook_status 2>/dev/null | awk '{print $NF}')"
     [ -z "$REHOOK_MODE" ] && REHOOK_MODE="0"
 
     string="$active | kpmodule: $KPM_COUNT 💉 | rehook: $REHOOK_MODE 🪝"

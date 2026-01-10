@@ -5,19 +5,18 @@ KPNDIR="/data/adb/kp-next"
 PATH="$MODDIR/bin:$PATH"
 CONFIG="$KPNDIR/package_config"
 REHOOK="$(cat $KPNDIR/rehook)"
-key="$(cat $KPNDIR/key | base64 -d)"
 
-if [ -z "$key" ] || [ -z "$(kpatch $key hello)" ]; then
+if [ -z "$(kpatch hello)" ]; then
     touch "$MODDIR/unresolved"
     exit 0
 fi
 
 for kpm in $KPNDIR/kpm/*.kpm; do
     [ -s "$kpm" ] || continue
-    kpatch "$key" kpm load "$kpm" || rm -f "$kpm"
+    kpatch kpm load "$kpm" || rm -f "$kpm"
 done
 
-[ -n "$REHOOK" ] && [ "$REHOOK" -ge 0 ] && [ "$REHOOK" -le 2 ] && kpatch "$key" rehook $REHOOK
+[ -n "$REHOOK" ] && [ "$REHOOK" -ge 0 ] && [ "$REHOOK" -le 2 ] && kpatch rehook $REHOOK
 
 until [ "$(getprop sys.boot_completed)" = "1" ]; do
     sleep 1
@@ -31,6 +30,6 @@ tail -n +2 "$CONFIG" | while IFS=, read -r pkg exclude allow uid; do
         UID=$(grep "^$pkg $uid" /data/system/packages.list | cut -d' ' -f2)
         # fallback to package name based
         [ -z "$UID" ] && UID=$(grep "^$pkg " /data/system/packages.list | cut -d' ' -f2)
-        [ -n "$UID" ] && kpatch "$key" exclude_set "$UID" 1
+        [ -n "$UID" ] && kpatch exclude_set "$UID" 1
     fi
 done

@@ -8,9 +8,6 @@
     <string name="title_settings">Ayarlar</string>
     <string name="title_home">Ana Sayfa</string>
     <string name="title_language">Dil</string>
-    <string name="title_superkey">SuperKey</string>
-    <string name="title_clear_superkey">SuperKey'i Temizle</string>
-    <string name="title_enter_superkey">SuperKey Gir</string>
     <string name="title_control_kpmodule">KPModül'ü Kontrol Et</string>
     <string name="title_select_language">Dil Seç</string>
     <string name="title_reboot">Yeniden Başlat</string>
@@ -32,7 +29,6 @@
     <string name="button_unload">Kaldır</string>
     <string name="button_refresh">Yenile</string>
     <!-- Labels -->
-    <string name="label_set_superkey">SuperKey Ayarla</string>
     <string name="label_input_control_parameters">Kontrol parametrelerini gir:</string>
     <string name="label_parameters">Parametreler</string>
     <string name="label_load_temporarily">Geçici olarak yükle</string>
@@ -45,9 +41,6 @@
     <!-- Status -->
     <string name="status_not_installed">Kurulu Değil</string>
     <string name="status_working">Çalışıyor 😋</string>
-    <string name="status_not_installed_or_authenticated">Kurulu değil veya kimliği doğrulanmamış</string>
-    <string name="status_authentication_failed">Kimlik Doğrulama Başarısız</string>
-    <string name="status_authentication_failed_desc">SuperKey kimliği doğrulanamadığından KPatch Next düzgün çalışamıyor. Lütfen tekrar deneyin.</string>
     <string name="status_loading">Yükleniyor...</string>
     <!-- Info -->
     <string name="info_kernel_version">Çekirdek sürümü</string>
@@ -70,7 +63,6 @@
     <string name="msg_no_module_loaded">Hiçbir modül yüklenmedi</string>
     <string name="msg_no_app_found">Uygulama bulunamadı</string>
     <string name="msg_no_module_found">Modül bulunamadı</string>
-    <string name="msg_clear_superkey_confirm">Gerçekten devam etmek istiyor musunuz?</string>
     <string name="msg_module_loaded">%1$s yüklenecek.</string>
     <string name="msg_unload_module">%1$s modülü kaldırılsın mı?</string>
     <string name="msg_redirecting_to">%1$s adresine yönlendiriliyor</string>

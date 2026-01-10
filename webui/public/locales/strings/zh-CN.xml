@@ -8,9 +8,6 @@
     <string name="title_settings">设置</string>
     <string name="title_home">首页</string>
     <string name="title_language">语言</string>
-    <string name="title_superkey">超级密钥</string>
-    <string name="title_clear_superkey">清除超级密钥</string>
-    <string name="title_enter_superkey">输入超级密钥</string>
     <string name="title_control_kpmodule">控制 KPModule</string>
     <string name="title_select_language">选择语言</string>
     <string name="title_reboot">重启</string>
@@ -32,7 +29,6 @@
     <string name="button_unload">卸载</string>
     <string name="button_refresh">刷新</string>
     <!-- Labels -->
-    <string name="label_set_superkey">设置超级密钥</string>
     <string name="label_input_control_parameters">输入控制参数：</string>
     <string name="label_parameters">参数</string>
     <string name="label_load_temporarily">临时加载</string>
@@ -45,9 +41,6 @@
     <!-- Status -->
     <string name="status_not_installed">未安装</string>
     <string name="status_working">工作中 😋</string>
-    <string name="status_not_installed_or_authenticated">未安装或未认证</string>
-    <string name="status_authentication_failed">认证失败</string>
-    <string name="status_authentication_failed_desc">无法认证超级密钥，因此 KPatch Next 无法正常工作。请重试。</string>
     <string name="status_loading">加载中...</string>
     <!-- Info -->
     <string name="info_kernel_version">内核版本</string>
@@ -70,7 +63,6 @@
     <string name="msg_no_module_loaded">未加载模块</string>
     <string name="msg_no_app_found">未发现应用</string>
     <string name="msg_no_module_found">未发现模块</string>
-    <string name="msg_clear_superkey_confirm">你确定要继续吗？</string>
     <string name="msg_module_loaded">%1$s 将被加载。</string>
     <string name="msg_unload_module">卸载 %1$s 模块？</string>
     <string name="msg_redirecting_to">正在跳转到 %1$s</string>

@@ -8,8 +8,6 @@
     <string name="title_settings">設定</string>
     <string name="title_home">ホーム</string>
     <string name="title_language">言語</string>
-    <string name="title_clear_superkey">SuperKey を消去</string>
-    <string name="title_enter_superkey">SuperKey を入力</string>
     <string name="title_control_kpmodule">KPModule を制御</string>
     <string name="title_select_language">言語を選択</string>
     <string name="title_reboot">再起動</string>
@@ -30,7 +28,6 @@
     <string name="button_unload">アンロード</string>
     <string name="button_refresh">更新</string>
     <!-- Labels -->
-    <string name="label_set_superkey">SuperKey を設定</string>
     <string name="label_input_control_parameters">制御パラメータを入力:</string>
     <string name="label_parameters">パラメータ</string>
     <string name="label_load_temporarily">一時的にロード</string>
@@ -40,9 +37,6 @@
     <!-- Status -->
     <string name="status_not_installed">未インストール</string>
     <string name="status_working">動作中 😋</string>
-    <string name="status_not_installed_or_authenticated">未インストールまたは未認証</string>
-    <string name="status_authentication_failed">認証に失敗しました</string>
-    <string name="status_authentication_failed_desc">SuperKey を認証できないため、KPatch Next は正常に動作しません。もう一度お試しください。</string>
     <string name="status_loading">読み込み中...</string>
     <!-- Info -->
     <string name="info_kernel_version">カーネルバージョン</string>
@@ -65,7 +59,6 @@
     <string name="msg_no_module_loaded">モジュールがロードされていません</string>
     <string name="msg_no_app_found">アプリが見つかりません</string>
     <string name="msg_no_module_found">モジュールが見つかりません</string>
-    <string name="msg_clear_superkey_confirm">続行してもよろしいですか?</string>
     <string name="msg_module_loaded">%1$s がロードされます。</string>
     <string name="msg_unload_module">%1$s モジュールをアンロードしますか?</string>
     <string name="msg_redirecting_to">%1$s にリダイレクトしています</string>

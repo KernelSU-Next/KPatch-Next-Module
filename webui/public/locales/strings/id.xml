@@ -5,8 +5,6 @@
     <string name="title_settings">Pengaturan</string>
     <string name="title_home">Beranda</string>
     <string name="title_language">Bahasa</string>
-    <string name="title_clear_superkey">Hapus SuperKey</string>
-    <string name="title_enter_superkey">Masukkan SuperKey</string>
     <string name="title_control_kpmodule">Kontrol KPModule</string>
     <string name="title_select_language">Pilih Bahasa</string>
     <string name="title_reboot">Mulai Ulang</string>
@@ -24,7 +22,6 @@
     <string name="button_unload">Lepas</string>
     <string name="button_refresh">Segarkan</string>
     <!-- Labels -->
-    <string name="label_set_superkey">Atur SuperKey</string>
     <string name="label_input_control_parameters">Masukkan parameter kontrol:</string>
     <string name="label_parameters">Parameter</string>
     <string name="label_load_temporarily">Muat sementara</string>
@@ -34,9 +31,6 @@
     <!-- Status -->
     <string name="status_not_installed">Tidak terinstal</string>
     <string name="status_working">Berjalan 😋</string>
-    <string name="status_not_installed_or_authenticated">Tidak terinstal atau terautentikasi</string>
-    <string name="status_authentication_failed">Autentikasi gagal</string>
-    <string name="status_authentication_failed_desc">Gagal mengautentikasi SuperKey, sehingga KPatch Next tidak dapat bekerja dengan baik. Silakan coba lagi.</string>
     <string name="status_loading">Memuat...</string>
     <!-- Info -->
     <string name="info_kernel_version">Versi Kernel</string>
@@ -58,7 +52,6 @@
     <string name="msg_no_module_loaded">Tidak ada modul dimuat</string>
     <string name="msg_no_app_found">Aplikasi tidak ditemukan</string>
     <string name="msg_no_module_found">Modul tidak ditemukan</string>
-    <string name="msg_clear_superkey_confirm">Apakah Anda yakin ingin melanjutkan?</string>
     <string name="msg_module_loaded">%1$s akan dimuat.</string>
     <string name="msg_unload_module">Lepas modul %1$s?</string>
     <string name="msg_redirecting_to">Mengalihkan ke %1$s</string>

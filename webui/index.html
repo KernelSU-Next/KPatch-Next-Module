@@ -95,10 +95,9 @@
                         <md-ripple></md-ripple>
                         <md-icon class="leading-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="m344-60-76-128-144-32 14-148-98-112 98-112-14-148 144-32 76-128 136 58 136-58 76 128 144 32-14 148 98 112-98 112 14 148-144 32-76 128-136-58-136 58Zm136-220q17 0 28.5-11.5T520-320q0-17-11.5-28.5T480-360q-17 0-28.5 11.5T440-320q0 17 11.5 28.5T480-280Zm-40-160h80v-240h-80v240Z" /></svg></md-icon>
                         <div class="home-card-text">
-                            <div class="home-card-title" data-i18n="status_not_installed_or_authenticated">Not installed or authenticated</div>
+                            <div class="home-card-title" data-i18n="status_not_installed">Not installed</div>
                             <div class="home-card-subtitle" data-i18n="button_install">Click to install</div>
                         </div>
-                        <md-filled-button id="authenticate" data-i18n="title_superkey">SuperKey</md-filled-button>
                     </div>
                     <div class="card home-card content-padding hidden" id="working">
                         <md-ripple></md-ripple>
@@ -152,13 +151,6 @@
             <div id="settings-page" class="page">
                 <div class="page-content">
                     <div class="list-group">
-                        <div class="list-item" id="clear-superkey">
-                            <md-ripple></md-ripple>
-                            <md-icon><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M280-360q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35Zm0 120q-100 0-170-70T40-480q0-100 70-170t170-70q81 0 141.5 46T506-560h335l79 79-140 160-100-79-80 80-80-80h-14q-25 72-87 116t-139 44Z" /></svg></md-icon>
-                            <div class="list-item-content">
-                                <div slot="headline" data-i18n="title_clear_superkey">Clear SuperKey</div>
-                            </div>
-                        </div>
                         <div class="list-item installed-only" id="rehook">
                             <md-ripple></md-ripple>
                             <md-icon><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M440-120q-100 0-170-70t-70-170v-240l200 200-56 57-64-64v47q0 66 47 113t113 47q66 0 113-47t47-113v-127q-36-14-58-44.5T520-600q0-38 22-68.5t58-44.5v-167h80v167q36 14 58 44.5t22 68.5q0 38-22 69t-58 44v127q0 100-70 170t-170 70Zm200-440q17 0 28.5-11.5T680-600q0-17-11.5-28.5T640-640q-17 0-28.5 11.5T600-600q0 17 11.5 28.5T640-560Zm0-40Z"/></svg></md-icon>
@@ -203,19 +195,10 @@
                         <div class="card-title" slot="headline" data-i18n="title_kernel">Kernel</div>
                         <div id="kernel-info"></div>
                     </div>
-                    <div class="card content-padding" id="superkey">
-                        <div class="card-title" slot="headline" data-i18n="title_superkey">SuperKey</div>
-                        <md-outlined-text-field label="Set SuperKey" type="password" class="password-field" data-i18n="label_set_superkey">
-                            <md-icon-button toggle selected slot="trailing-icon">
-                                <md-icon><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M480-320q75 0 127.5-52.5T660-500q0-75-52.5-127.5T480-680q-75 0-127.5 52.5T300-500q0 75 52.5 127.5T480-320Zm0-72q-45 0-76.5-31.5T372-500q0-45 31.5-76.5T480-608q45 0 76.5 31.5T588-500q0 45-31.5 76.5T480-392Zm0 192q-146 0-266-81.5T40-500q54-137 174-218.5T480-800q146 0 266 81.5T920-500q-54 137-174 218.5T480-200Zm0-300Zm0 220q113 0 207.5-59.5T832-500q-50-101-144.5-160.5T480-720q-113 0-207.5 59.5T128-500q50 101 144.5 160.5T480-280Z" /></svg></md-icon>
-                                <md-icon slot="selected"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="m644-428-58-58q9-47-27-88t-93-32l-58-58q17-8 34.5-12t37.5-4q75 0 127.5 52.5T660-500q0 20-4 37.5T644-428Zm128 126-58-56q38-29 67.5-63.5T832-500q-50-101-143.5-160.5T480-720q-29 0-57 4t-55 12l-62-62q41-17 84-25.5t90-8.5q151 0 269 83.5T920-500q-23 59-60.5 109.5T772-302Zm20 246L624-222q-35 11-70.5 16.5T480-200q-151 0-269-83.5T40-500q21-53 53-98.5t73-81.5L56-792l56-56 736 736-56 56ZM222-624q-29 26-53 57t-41 67q50 101 143.5 160.5T480-280q20 0 39-2.5t39-5.5l-36-38q-11 3-21 4.5t-21 1.5q-75 0-127.5-52.5T300-500q0-11 1.5-21t4.5-21l-84-82Zm319 93Zm-151 75Z" /></svg></md-icon>
-                            </md-icon-button>
-                        </md-outlined-text-field>
-                    </div>
                     <div class="module-list content-padding" id="kpm-embed-list"></div>
                     <div class="trailing-btn content-padding" id="patch-options">
                         <md-filled-button class="patch-only" id="embed" data-i18n="button_embed_kpm">Embed KPM</md-filled-button>
-                        <md-filled-button class="patch-only" id="start" disabled data-i18n="button_start">Start</md-filled-button>
+                        <md-filled-button class="patch-only" id="start" data-i18n="button_start">Start</md-filled-button>
                         <md-filled-button class="unpatch-only" id="unpatch" data-i18n="button_unpatch">UnPatch</md-filled-button>
                     </div>
                     <div class="output-terminal content-padding" id="patch-terminal"></div>
@@ -255,39 +238,6 @@
 
     <!-- Dialog -->
     <div class="dialog-wrapper" unresolved>
-        <!-- Superkey -->
-        <md-dialog class="text-field-dialog" id="superkey-dialog">
-            <div slot="headline" data-i18n="title_enter_superkey">Enter SuperKey</div>
-            <div slot="content">
-                <md-outlined-text-field label="SuperKey" type="password" class="password-field">
-                    <md-icon-button toggle selected slot="trailing-icon">
-                        <md-icon><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M480-320q75 0 127.5-52.5T660-500q0-75-52.5-127.5T480-680q-75 0-127.5 52.5T300-500q0 75 52.5 127.5T480-320Zm0-72q-45 0-76.5-31.5T372-500q0-45 31.5-76.5T480-608q45 0 76.5 31.5T588-500q0 45-31.5 76.5T480-392Zm0 192q-146 0-266-81.5T40-500q54-137 174-218.5T480-800q146 0 266 81.5T920-500q-54 137-174 218.5T480-200Zm0-300Zm0 220q113 0 207.5-59.5T832-500q-50-101-144.5-160.5T480-720q-113 0-207.5 59.5T128-500q50 101 144.5 160.5T480-280Z" /></svg></md-icon>
-                        <md-icon slot="selected"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="m644-428-58-58q9-47-27-88t-93-32l-58-58q17-8 34.5-12t37.5-4q75 0 127.5 52.5T660-500q0 20-4 37.5T644-428Zm128 126-58-56q38-29 67.5-63.5T832-500q-50-101-143.5-160.5T480-720q-29 0-57 4t-55 12l-62-62q41-17 84-25.5t90-8.5q151 0 269 83.5T920-500q-23 59-60.5 109.5T772-302Zm20 246L624-222q-35 11-70.5 16.5T480-200q-151 0-269-83.5T40-500q21-53 53-98.5t73-81.5L56-792l56-56 736 736-56 56ZM222-624q-29 26-53 57t-41 67q50 101 143.5 160.5T480-280q20 0 39-2.5t39-5.5l-36-38q-11 3-21 4.5t-21 1.5q-75 0-127.5-52.5T300-500q0-11 1.5-21t4.5-21l-84-82Zm319 93Zm-151 75Z" /></svg></md-icon>
-                    </md-icon-button>
-                </md-outlined-text-field>
-            </div>
-            <div slot="actions">
-                <md-text-button class="cancel" data-i18n="button_cancel">Cancel</md-text-button>
-                <md-filled-button class="confirm" disabled data-i18n="button_ok">OK</md-filled-button>
-            </div>
-        </md-dialog>
-        <md-dialog id="authentication-failed-dialog">
-            <div slot="headline" data-i18n="status_authentication_failed">Authentication failed</div>
-            <div slot="content" data-i18n="status_authentication_failed_desc">
-                Unable to authenticate the SuperKey, therefore KPatch Next cannot work properly. Please try again.
-            </div>
-            <div slot="actions">
-                <md-text-button class="confirm" data-i18n="button_ok">OK</md-text-button>
-            </div>
-        </md-dialog>
-        <md-dialog id="clear-superkey-dialog">
-            <div slot="headline" data-i18n="title_clear_superkey">Clear SuperKey</div>
-            <div slot="content" data-i18n="msg_clear_superkey_confirm">Do you really want to proceed?</div>
-            <div slot="actions">
-                <md-text-button class="cancel" data-i18n="button_cancel">Cancel</md-text-button>
-                <md-text-button class="confirm" data-i18n="button_ok">OK</md-text-button>
-            </div>
-        </md-dialog>
         <!-- KPM embed control -->
         <md-dialog class="text-field-dialog" id="control-dialog">
             <div slot="headline" data-i18n="title_control_kpmodule">Control KPModule</div>

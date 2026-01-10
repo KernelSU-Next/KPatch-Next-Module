@@ -5,8 +5,6 @@
     <string name="title_settings">Настройки</string>
     <string name="title_home">Главная</string>
     <string name="title_language">Язык</string>
-    <string name="title_clear_superkey">Очистить SuperKey</string>
-    <string name="title_enter_superkey">Ввести SuperKey</string>
     <string name="title_control_kpmodule">Управление KPModule</string>
     <string name="title_select_language">Выбор языка</string>
     <string name="title_reboot">Перезагрузка</string>
@@ -27,7 +25,6 @@
     <string name="button_unload">Выгрузить</string>
     <string name="button_refresh">Обновить</string>
     <!-- Labels -->
-    <string name="label_set_superkey">Установить SuperKey</string>
     <string name="label_input_control_parameters">Введите параметры управления:</string>
     <string name="label_parameters">Параметры</string>
     <string name="label_load_temporarily">Загрузить временно</string>
@@ -37,9 +34,6 @@
     <!-- Status -->
     <string name="status_not_installed">Не установлено</string>
     <string name="status_working">Работает 😋</string>
-    <string name="status_not_installed_or_authenticated">Не установлено или не авторизовано</string>
-    <string name="status_authentication_failed">Ошибка аутентификации</string>
-    <string name="status_authentication_failed_desc">Не удалось аутентифицировать SuperKey, поэтому KPatch Next не может работать корректно. Пожалуйста, попробуйте снова.</string>
     <string name="status_loading">Загрузка...</string>
     <!-- Info -->
     <string name="info_kernel_version">Версия ядра</string>
@@ -62,7 +56,6 @@
     <string name="msg_no_module_loaded">Модуль не загружен</string>
     <string name="msg_no_app_found">Приложения не найдены</string>
     <string name="msg_no_module_found">Модули не найдены</string>
-    <string name="msg_clear_superkey_confirm">Вы действительно хотите продолжить?</string>
     <string name="msg_module_loaded">%1$s будет загружен.</string>
     <string name="msg_unload_module">Выгрузить модуль %1$s?</string>
     <string name="msg_redirecting_to">Переход к %1$s</string>

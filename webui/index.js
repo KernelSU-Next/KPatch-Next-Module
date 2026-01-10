@@ -15,7 +15,6 @@ const rehookMode = [
     "minimal"   // 2
 ]
 
-export let superkey = localStorage.getItem('kp-next_superkey') || '';
 export let MAX_CHUNK_SIZE = 96 * 1024;
 
 async function updateStatus() {
@@ -26,55 +25,19 @@ async function updateStatus() {
     const installedOnly = document.querySelectorAll('.installed-only');
     if (version) {
         versionText.textContent = version;
-        notInstalled.classList.add('hidden');
-        working.classList.remove('hidden');
         kpmModule.refreshKpmList();
         initRehook();
-        document.querySelector('#superkey md-outlined-text-field').value = superkey;
         installedOnly.forEach(el => el.removeAttribute('hidden'));
     } else {
-        versionText.textContent = getString('status_not_installed');
-        notInstalled.classList.remove('hidden');
-        working.classList.add('hidden');
         installedOnly.forEach(el => el.setAttribute('hidden', ''));
-        if (superkey) {
-            updateSuperkey('');
-            updateBtnState(false);
-            const failedDialog = document.getElementById('authentication-failed-dialog');
-            failedDialog.show();
-            failedDialog.querySelector('.confirm').onclick = () => failedDialog.close();
-        }
     }
+    notInstalled.classList.toggle('hidden', version);
+    working.classList.toggle('hidden', !version);
 }
 
 export function escapeShell(cmd) {
     if (cmd === '' || cmd === null || cmd === undefined) return '""';
     return '"' + cmd.replace(/[\\"$`'[\]]/g, '\\$&') + '"';
-}
-
-function updateSuperkey(key) {
-    superkey = key;
-    document.querySelectorAll('.password-field').forEach(field => {
-        field.value = key;
-    });
-    localStorage.setItem('kp-next_superkey', key);
-    exec(`
-        key="${btoa(key)}"
-        if [ -n "$key" ]; then
-            echo "$key" > /data/adb/kp-next/key
-            if [ -f "${modDir}/unresolved" ]; then
-                rm -f "${modDir}/unresolved"
-                busybox nohup sh "${modDir}/service.sh" &
-            fi
-        else
-            rm -f /data/adb/kp-next/key
-        fi
-    `, { env: { PATH: '/data/adb/ksu/bin:/data/adb/magisk:$PATH' } });
-}
-
-function updateBtnState(value) {
-    document.querySelector('#superkey-dialog .confirm').disabled = !value;
-    document.getElementById('start').disabled = !value;
 }
 
 export async function initInfo() {
@@ -117,7 +80,7 @@ async function updateRehookStatus() {
 
     let modeName = 'target', modeId = null;
 
-    const result = await exec(`kpatch ${escapeShell(superkey)} rehook_status`, { env: { PATH: `${modDir}/bin` } });
+    const result = await exec(`kpatch rehook_status`, { env: { PATH: `${modDir}/bin` } });
     const mode = result.stdout.split('\n').find(line => line.includes('mode: '));
     if (mode) {
         modeId = parseInt(mode.split(':')[1].trim());
@@ -132,7 +95,7 @@ async function updateRehookStatus() {
 
 function setRehookMode(mode) {
     exec(`
-        kpatch ${escapeShell(superkey)} rehook ${mode} && echo ${mode} > ${persistDir}/rehook`,
+        kpatch rehook ${mode} && echo ${mode} > ${persistDir}/rehook`,
         { env: { PATH: `${modDir}/bin:$PATH` } }
     ).then((result) => {
         if (result.errno !== 0) {
@@ -181,46 +144,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     language.onclick = () => languageDialog.show();
     languageDialog.querySelector('.cancel').onclick = () => languageDialog.close();
 
-    // visibility toggle for SuperKey text field
-    document.querySelectorAll('.password-field').forEach(field => {
-        const toggleBtn = field.querySelector('md-icon-button[toggle]');
-        if (toggleBtn) {
-            toggleBtn.addEventListener('change', () => {
-                field.type = toggleBtn.selected ? 'password' : 'text';
-            });
-        }
-    });
-
-    // Superkey
-    const superkeyDialog = document.getElementById('superkey-dialog');
-    const clearSuperkeyDialog = document.getElementById('clear-superkey-dialog');
-    document.getElementById('authenticate').addEventListener('click', (e) => {
-        e.stopPropagation();
-        superkeyDialog.show();
-    });
-    document.querySelectorAll('.password-field').forEach(input => {
-        input.oninput = () => updateBtnState(input.value);
-    });
-    superkeyDialog.querySelector('.cancel').onclick = () => superkeyDialog.close();
-    superkeyDialog.querySelector('.confirm').onclick = () => {
-        const value = superkeyDialog.querySelector('.password-field').value;
-        updateSuperkey(value);
-        updateBtnState(value);
-        updateStatus();
-        superkeyDialog.close();
-    }
-    document.getElementById('clear-superkey').onclick = () => clearSuperkeyDialog.show();
-    clearSuperkeyDialog.querySelector('.cancel').onclick = () => clearSuperkeyDialog.close();
-    clearSuperkeyDialog.querySelector('.confirm').onclick = () => {
-        clearSuperkeyDialog.close();
-        updateSuperkey('');
-        updateBtnState('');
-        updateStatus();
-        navigateToHome();
-    }
-
     // patch/unpatch
-    const patchTextField = document.querySelector('#superkey md-outlined-text-field');
     document.getElementById('embed').onclick = patchModule.embedKPM;
     document.getElementById('start').onclick = () => {
         document.querySelector('.trailing-btn').style.display = 'none';
@@ -231,10 +155,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         document.querySelector('.trailing-btn').style.display = 'none';
         patchModule.patch("unpatch");
     }
-    patchTextField.addEventListener('focus', () => {
-        const pageContent = patchTextField.closest('.page-content');
-        pageContent.scrollTo({ top: pageContent.scrollHeight, behavior: 'smooth' });
-    });
 
     // reboot
     const rebootMenu = document.getElementById('reboot-menu');
@@ -248,7 +168,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
     document.getElementById('reboot-fab').onclick = () => reboot();
 
-    updateBtnState(superkey);
     getMaxChunkSize();
 
     await loadTranslations();
