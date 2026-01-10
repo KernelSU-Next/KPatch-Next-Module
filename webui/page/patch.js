@@ -401,7 +401,7 @@ function patch(type) {
     });
 }
 
-export function initEmbedPage() {
+function initEmbedPage() {
     const embedBtn = document.getElementById('embed');
     const startBtn = document.getElementById('start');
     const patchBtn = document.getElementById('patch');
