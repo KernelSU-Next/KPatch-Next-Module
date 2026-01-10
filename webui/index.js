@@ -95,7 +95,7 @@ async function updateRehookStatus() {
 
 function setRehookMode(mode) {
     exec(`
-        kpatch rehook ${mode} && echo ${mode} > ${persistDir}/rehook`,
+        kpatch rehook ${mode} && echo ${mode} > ${persistDir}/rehook && sh "${modDir}/status.sh"`,
         { env: { PATH: `${modDir}/bin:$PATH` } }
     ).then((result) => {
         if (result.errno !== 0) {
