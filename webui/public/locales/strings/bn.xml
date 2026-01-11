@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- UI Labels -->
+    <string name="title_patch">প্যাচ</string>
+    <string name="title_unpatch">আনপ্যাচ</string>
+    <string name="title_kpmodule">KPModule</string>
+    <string name="title_exclude">বাদ দিন</string>
+    <string name="title_settings">সেটিংস</string>
+    <string name="title_home">হোম</string>
+    <string name="title_language">ভাষা</string>
+    <string name="title_control_kpmodule">KPModule নিয়ন্ত্রণ</string>
+    <string name="title_select_language">ভাষা নির্বাচন করুন</string>
+    <string name="title_reboot">রিবুট</string>
+    <string name="title_reboot_recovery">রিকভারিতে রিবুট</string>
+    <string name="title_reboot_bootloader">বুটলোডারে রিবুট</string>
+    <string name="title_reboot_download">ডাউনলোডে রিবুট</string>
+    <string name="title_reboot_edl">EDL-এ রিবুট</string>
+    <string name="title_kernel">কার্নেল</string>
+    <string name="title_rehook_mode">রিহুক মোড</string>
+    <!-- Buttons -->
+    <string name="button_install">ইনস্টল করতে ক্লিক করুন</string>
+    <string name="button_uninstall">আনইনস্টল</string>
+    <string name="button_embed_kpm">KPM এম্বেড করুন</string>
+    <string name="button_start">শুরু করুন</string>
+    <string name="button_unpatch">আনপ্যাচ</string>
+    <string name="button_cancel">বাতিল</string>
+    <string name="button_ok">ঠিক আছে</string>
+    <string name="button_load">লোড করুন</string>
+    <string name="button_unload">আনলোড করুন</string>
+    <string name="button_refresh">রিফ্রেশ</string>
+    <!-- Labels -->
+    <string name="label_input_control_parameters">নিয়ন্ত্রণ প্যারামিটার ইনপুট করুন:</string>
+    <string name="label_parameters">প্যারামিটার</string>
+    <string name="label_load_temporarily">সাময়িকভাবে লোড করুন</string>
+    <string name="label_show_system_app">সিস্টেম অ্যাপ দেখান</string>
+    <string name="label_system_default">সিস্টেম ডিফল্ট</string>
+    <string name="label_trigger_event">ট্রিগার ইভেন্ট</string>
+    <string name="label_rehook_mode_disable">নিষ্ক্রিয়</string>
+    <string name="label_rehook_mode_target">টার্গেট</string>
+    <string name="label_rehook_mode_minimal">ন্যূনতম</string>
+    <!-- Status -->
+    <string name="status_not_installed">ইনস্টল করা নেই</string>
+    <string name="status_working">কাজ করছে 😋</string>
+    <string name="status_loading">লোড হচ্ছে...</string>
+    <!-- Info -->
+    <string name="info_kernel_version">কার্নেল সংস্করণ</string>
+    <string name="info_system_version">সিস্টেম সংস্করণ</string>
+    <string name="info_fingerprint">ফিঙ্গারপ্রিন্ট</string>
+    <string name="info_selinux_status">SELinux স্ট্যাটাস</string>
+    <string name="info_version">সংস্করণ: %1$s</string>
+    <string name="info_time">সময়: %1$s</string>
+    <string name="info_config">কনফিগ: %1$s</string>
+    <string name="info_slot">স্লট: %1$s</string>
+    <string name="info_device">ডিভাইস: %1$s</string>
+    <string name="info_device_unknown">ডিভাইস: অজানা</string>
+    <string name="info_author">লেখক: %1$s</string>
+    <string name="info_args">Args: %1$s</string>
+    <string name="info_no_description">কোনো বর্ণনা নেই</string>
+    <string name="info_embedded">এম্বেডেড</string>
+    <string name="info_user">ব্যবহারকারী %1$s</string>
+    <string name="info_system">সিস্টেম</string>
+    <!-- Messages -->
+    <string name="msg_no_module_loaded">কোনো মডিউল লোড করা নেই</string>
+    <string name="msg_no_app_found">কোনো অ্যাপ পাওয়া যায়নি</string>
+    <string name="msg_no_module_found">কোনো মডিউল পাওয়া যায়নি</string>
+    <string name="msg_module_loaded">%1$s লোড করা হবে।</string>
+    <string name="msg_unload_module">%1$s মডিউল আনলোড করবেন?</string>
+    <string name="msg_redirecting_to">%1$s-এ রিডাইরেক্ট করা হচ্ছে</string>
+    <string name="msg_failed_open_link">exec দিয়ে লিঙ্ক খুলতে ব্যর্থ</string>
+    <string name="msg_failed_parse_kernel">কার্নেল পার্স করতে ব্যর্থ:</string>
+    <string name="msg_boot_extract_failed">বুট এক্সট্র্যাক্ট ব্যর্থ</string>
+    <string name="msg_failed_locate_boot">বুট ইমেজ খুঁজে পেতে ব্যর্থ</string>
+    <string name="msg_invalid_kpm_file">অবৈধ KPM ফাইল</string>
+    <string name="msg_could_not_parse_kpm">KPM তথ্য পার্স করা যায়নি</string>
+    <string name="msg_error_no_boot_image">ত্রুটি: কোনো বুট ইমেজ পাওয়া যায়নি।</string>
+    <string name="msg_please_select_file">অনুগ্রহ করে একটি %1$s ফাইল নির্বাচন করুন</string>
+    <string name="msg_please_wait">অনুগ্রহ করে অপেক্ষা করুন...</string>
+    <string name="msg_uploading">আপলোড হচ্ছে... </string>
+    <string name="msg_upload_cancelled">আপলোড বাতিল করা হয়েছে</string>
+    <string name="msg_error">ত্রুটি: %1$s</string>
+    <string name="msg_successfully_loaded">%1$s সফলভাবে লোড হয়েছে</string>
+    <string name="msg_failed_load_module">%1$s মডিউল লোড করতে ব্যর্থ</string>
+    <string name="msg_failed_get_module_info">মডিউল তথ্য পেতে ব্যর্থ</string>
+    <string name="msg_error_loading_apps">অ্যাপ লোড করতে ত্রুটি: </string>
+    <string name="msg_error_rendering_apps">অ্যাপ রেন্ডার করতে ত্রুটি: </string>
+    <string name="msg_unknown">অজানা</string>
+</resources>
