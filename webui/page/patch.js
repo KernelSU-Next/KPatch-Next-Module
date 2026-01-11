@@ -411,7 +411,7 @@ function patch(type) {
     });
 }
 
-export function initPatchPage() {
+function initPatchPage() {
     const embedBtn = document.getElementById('embed');
     const startBtn = document.getElementById('start');
     const patchBtn = document.getElementById('patch');
