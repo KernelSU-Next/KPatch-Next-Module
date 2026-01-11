@@ -60,10 +60,6 @@ function preparePatchUI(title, isUnpatch) {
 
     document.querySelectorAll('.patch-only').forEach(p => p.classList.toggle('hidden', isUnpatch));
     document.querySelectorAll('.unpatch-only').forEach(p => p.classList.toggle('hidden', !isUnpatch));
-
-    if (isUnpatch) {
-        document.getElementById('patch-keyboard-inset').classList.remove('hide');
-    }
 }
 
 export function navigateToHome() {

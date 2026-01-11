@@ -148,7 +148,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     document.getElementById('embed').onclick = patchModule.embedKPM;
     document.getElementById('start').onclick = () => {
         document.querySelector('.trailing-btn').style.display = 'none';
-        document.getElementById('patch-keyboard-inset').classList.add('hide');
         patchModule.patch("patch");
     }
     document.getElementById('unpatch').onclick = () => {

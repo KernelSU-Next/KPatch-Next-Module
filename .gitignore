@@ -1,4 +1,5 @@
 /webui/node_modules
 /module/webroot
 /module/bin
+/out
 *.zip
