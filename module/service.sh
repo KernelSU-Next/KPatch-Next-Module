@@ -16,7 +16,13 @@ for kpm in $KPNDIR/kpm/*.kpm; do
     kpatch kpm load "$kpm" || rm -f "$kpm"
 done
 
-[ -n "$REHOOK" ] && [ "$REHOOK" -ge 0 ] && [ "$REHOOK" -le 2 ] && kpatch rehook $REHOOK
+if [ -n "$REHOOK" ]; then
+    if [ "$REHOOK" = "enable" ] || [ "$REHOOK" = "disable" ]; then
+        kpatch rehook $REHOOK
+    else
+        rm -f "$KPNDIR/rehook"
+    fi
+fi
 
 until [ "$(getprop sys.boot_completed)" = "1" ]; do
     sleep 1

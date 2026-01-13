@@ -46,7 +46,7 @@ if kpatch hello >/dev/null 2>&1; then
     [ -z "$KPM_COUNT" ] && KPM_COUNT=0
 
     REHOOK_MODE="$(kpatch rehook_status 2>/dev/null | awk '{print $NF}')"
-    [ -z "$REHOOK_MODE" ] && REHOOK_MODE="0"
+    [ -z "$REHOOK_MODE" ] && REHOOK_MODE="enabled"
 
     string="$active | kpmodule: $KPM_COUNT 💉 | rehook: $REHOOK_MODE 🪝"
 fi
