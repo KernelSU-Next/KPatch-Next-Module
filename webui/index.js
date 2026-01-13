@@ -9,12 +9,6 @@ import * as excludeModule from './page/exclude.js';
 export const modDir = '/data/adb/modules/KPatch-Next';
 export const persistDir = '/data/adb/kp-next';
 
-const rehookMode = [
-    "disable",  // 0
-    "target",   // 1
-    "minimal"   // 2
-]
-
 export let MAX_CHUNK_SIZE = 96 * 1024;
 
 async function updateStatus() {
@@ -62,38 +56,41 @@ async function reboot(reason = "") {
 
 async function initRehook() {
     const rehook = document.getElementById('rehook');
-    const rehookMenu = rehook.querySelector('md-menu');
-    const mode = await updateRehookStatus();
-    if (mode) rehook.onclick = () => rehookMenu.open = !rehookMenu.open;
-    rehookMenu.querySelectorAll('md-menu-item').forEach((item, index) => {
-        item.onclick = () => {
-            setRehookMode(index);
-            rehook.click();
-        }
+    const rehookRipple = rehook.querySelector('md-ripple');
+    const rehookSwitch = rehook.querySelector('md-switch');
+    const isEnabled = await updateRehookStatus();
+    if (isEnabled === null) {
+        rehookRipple.disabled = true;
+        rehookSwitch.disabled = true;
+        return;
+    }
+    rehookSwitch.addEventListener('change', () => {
+        setRehookMode(rehookSwitch.selected);
     });
 }
 
 async function updateRehookStatus() {
     const rehook = document.getElementById('rehook');
-    const rehookText = rehook.querySelector('.menu-text');
-    const rehookRipple = rehook.querySelector('md-ripple');
+    const rehookSwitch = rehook.querySelector('md-switch');
 
-    let modeName = 'target', modeId = null;
+    let isEnabled = null;
 
     const result = await exec(`kpatch rehook_status`, { env: { PATH: `${modDir}/bin` } });
-    const mode = result.stdout.split('\n').find(line => line.includes('mode: '));
-    if (mode) {
-        modeId = parseInt(mode.split(':')[1].trim());
-        modeName = rehookMode[modeId];
+    if (result.errno === 0) {
+        const mode = result.stdout.split(':')[1].trim();
+        if (mode === 'enabled') {
+            isEnabled = true;
+        } else if (mode === 'disabled') {
+            isEnabled = false;
+        }
+        rehookSwitch.selected = isEnabled;
     }
-    rehookText.textContent = getString('label_rehook_mode_' + modeName);
-    rehookText.classList.toggle('disabled', !mode);
-    rehookRipple.disabled = !mode;
 
-    return modeId !== null;
+    return isEnabled;
 }
 
-function setRehookMode(mode) {
+function setRehookMode(isEnable) {
+    const mode = isEnable ? "enable" : "disable";
     exec(`
         kpatch rehook ${mode} && echo ${mode} > ${persistDir}/rehook && sh "${modDir}/status.sh"`,
         { env: { PATH: `${modDir}/bin:$PATH` } }

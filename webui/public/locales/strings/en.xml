@@ -16,7 +16,7 @@
     <string name="title_reboot_download">Reboot to Download</string>
     <string name="title_reboot_edl">Reboot to EDL</string>
     <string name="title_kernel">Kernel</string>
-    <string name="title_rehook_mode">Rehook Mode</string>
+    <string name="title_rehook_syscall">Rehook Syscall</string>
     <!-- Buttons -->
     <string name="button_install">Click to install</string>
     <string name="button_uninstall">Uninstall</string>
@@ -35,9 +35,6 @@
     <string name="label_show_system_app">Show system app</string>
     <string name="label_system_default">System Default</string>
     <string name="label_trigger_event">Trigger Event</string>
-    <string name="label_rehook_mode_disable">Disable</string>
-    <string name="label_rehook_mode_target">Target</string>
-    <string name="label_rehook_mode_minimal">Minimal</string>
     <!-- Status -->
     <string name="status_not_installed">Not installed</string>
     <string name="status_working">Working 😋</string>

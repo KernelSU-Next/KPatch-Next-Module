@@ -44,7 +44,11 @@ done
 if kpatch hello >/dev/null 2>&1; then
     KPM_COUNT="$(kpatch kpm num 2>/dev/null || echo 0)"
     [ -z "$KPM_COUNT" ] && KPM_COUNT=0
-    string="$active | KPM数量: $KPM_COUNT 💉"
+
+    REHOOK_MODE="$(kpatch rehook_status 2>/dev/null | awk '{print $NF}')"
+    [ -z "$REHOOK_MODE" ] && REHOOK_MODE="enabled"
+
+    string="$active | KPM数量: $KPM_COUNT 💉 | 自动修补: $REHOOK_MODE 🪝"
 fi
 
 restore_prop_if_needed
