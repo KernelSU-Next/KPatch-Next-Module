@@ -35,9 +35,6 @@
     <string name="label_show_system_app">显示系统应用</string>
     <string name="label_system_default">系统默认</string>
     <string name="label_trigger_event">触发事件</string>
-    <string name="label_rehook_mode_disable">禁用</string>
-    <string name="label_rehook_mode_target">目标</string>
-    <string name="label_rehook_mode_minimal">最小化</string>
     <!-- Status -->
     <string name="status_not_installed">未安装</string>
     <string name="status_working">工作中 😋</string>

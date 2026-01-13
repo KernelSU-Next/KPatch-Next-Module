@@ -35,9 +35,6 @@
     <string name="label_show_system_app">Sistem uygulamasını göster</string>
     <string name="label_system_default">Sistem Varsayılanı</string>
     <string name="label_trigger_event">Olay Tetikle</string>
-    <string name="label_rehook_mode_disable">Devre Dışı Bırak</string>
-    <string name="label_rehook_mode_target">Hedef</string>
-    <string name="label_rehook_mode_minimal">Minimal</string>
     <!-- Status -->
     <string name="status_not_installed">Kurulu Değil</string>
     <string name="status_working">Çalışıyor 😋</string>

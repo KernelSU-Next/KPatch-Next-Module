@@ -35,9 +35,6 @@
     <string name="label_show_system_app">システムアプリを表示</string>
     <string name="label_system_default">システムのデフォルト</string>
     <string name="label_trigger_event">トリガーイベント</string>
-    <string name="label_rehook_mode_disable">無効化</string>
-    <string name="label_rehook_mode_target">ターゲット</string>
-    <string name="label_rehook_mode_minimal">最小限</string>
     <!-- Status -->
     <string name="status_not_installed">未インストール</string>
     <string name="status_working">動作中 😋</string>
