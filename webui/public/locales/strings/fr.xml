@@ -15,7 +15,7 @@
     <string name="title_reboot_bootloader">Redémarrer vers le Bootloader</string>
     <string name="title_reboot_download">Redémarrer en mode Téléchargement</string>
     <string name="title_reboot_edl">Redémarrer en mode EDL</string>
-    <string name="title_rehook_mode">Mode Rehook</string>
+    <string name="title_rehook_syscall">Rehook Syscall</string>
     <!-- Buttons -->
     <string name="button_install">Appuyez pour installer</string>
     <string name="button_uninstall">Désinstaller</string>
@@ -33,9 +33,6 @@
     <string name="label_show_system_app">Afficher les applications système</string>
     <string name="label_system_default">Paramètre système par défaut</string>
     <string name="label_trigger_event">Déclencher un événement</string>
-    <string name="label_rehook_mode_disable">Désactiver</string>
-    <string name="label_rehook_mode_target">Cible</string>
-    <string name="label_rehook_mode_minimal">Minimal</string>
     <!-- Status -->
     <string name="status_not_installed">Non installé</string>
     <string name="status_working">En fonctionnement 😋</string>

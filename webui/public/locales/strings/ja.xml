@@ -16,7 +16,7 @@
     <string name="title_reboot_download">ダウンロードモードへ再起動</string>
     <string name="title_reboot_edl">EDL へ再起動</string>
     <string name="title_kernel">カーネル</string>
-    <string name="title_rehook_mode">再フックモード</string>
+    <string name="title_rehook_syscall">再フック Syscall</string>
     <!-- Buttons -->
     <string name="button_install">クリックしてインストール</string>
     <string name="button_uninstall">アンインストール</string>
@@ -35,9 +35,6 @@
     <string name="label_show_system_app">システムアプリを表示</string>
     <string name="label_system_default">システムのデフォルト</string>
     <string name="label_trigger_event">トリガーイベント</string>
-    <string name="label_rehook_mode_disable">無効化</string>
-    <string name="label_rehook_mode_target">ターゲット</string>
-    <string name="label_rehook_mode_minimal">最小限</string>
     <!-- Status -->
     <string name="status_not_installed">未インストール</string>
     <string name="status_working">動作中 😋</string>

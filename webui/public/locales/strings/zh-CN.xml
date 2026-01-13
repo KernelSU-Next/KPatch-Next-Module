@@ -16,7 +16,7 @@
     <string name="title_reboot_download">重启到 Download</string>
     <string name="title_reboot_edl">重启到 EDL</string>
     <string name="title_kernel">内核</string>
-    <string name="title_rehook_mode">重挂钩模式</string>
+    <string name="title_rehook_syscall">重挂钩 Syscall</string>
     <!-- Buttons -->
     <string name="button_install">点击安装</string>
     <string name="button_uninstall">卸载</string>
@@ -35,9 +35,6 @@
     <string name="label_show_system_app">显示系统应用</string>
     <string name="label_system_default">系统默认</string>
     <string name="label_trigger_event">触发事件</string>
-    <string name="label_rehook_mode_disable">禁用</string>
-    <string name="label_rehook_mode_target">目标</string>
-    <string name="label_rehook_mode_minimal">最小化</string>
     <!-- Status -->
     <string name="status_not_installed">未安装</string>
     <string name="status_working">工作中 😋</string>

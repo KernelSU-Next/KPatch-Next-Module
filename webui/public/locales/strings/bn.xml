@@ -16,7 +16,7 @@
     <string name="title_reboot_download">ডাউনলোডে রিবুট</string>
     <string name="title_reboot_edl">EDL-এ রিবুট</string>
     <string name="title_kernel">কার্নেল</string>
-    <string name="title_rehook_mode">রিহুক মোড</string>
+    <string name="title_rehook_syscall">রিহুক Syscall</string>
     <!-- Buttons -->
     <string name="button_install">ইনস্টল করতে ক্লিক করুন</string>
     <string name="button_uninstall">আনইনস্টল</string>
@@ -35,9 +35,6 @@
     <string name="label_show_system_app">সিস্টেম অ্যাপ দেখান</string>
     <string name="label_system_default">সিস্টেম ডিফল্ট</string>
     <string name="label_trigger_event">ট্রিগার ইভেন্ট</string>
-    <string name="label_rehook_mode_disable">নিষ্ক্রিয়</string>
-    <string name="label_rehook_mode_target">টার্গেট</string>
-    <string name="label_rehook_mode_minimal">ন্যূনতম</string>
     <!-- Status -->
     <string name="status_not_installed">ইনস্টল করা নেই</string>
     <string name="status_working">কাজ করছে 😋</string>
