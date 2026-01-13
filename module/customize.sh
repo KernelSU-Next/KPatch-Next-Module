@@ -1,3 +1,5 @@
+MODDIR="/data/adb/modules/KPatch-Next"
+
 # Conflict with APatch
 if [ "$APATCH" ]; then
     abort "! APatch is unsupported"
@@ -19,3 +21,9 @@ fi
 
 # backup module.prop
 cp "$MODPATH/module.prop" "$MODPATH/module.prop.bak"
+
+# Hot update webui, patch scripts and binaries
+rm -rf "$MODDIR/webroot"/* "$MODDIR/bin"/* "$MODDIR/patch"/*
+cp -Lrf "$MODPATH/webroot"/* "$MODDIR/webroot"
+cp -Lrf "$MODPATH/bin"/* "$MODDIR/bin"
+cp -Lrf "$MODPATH/patch"/* "$MODDIR/patch"
