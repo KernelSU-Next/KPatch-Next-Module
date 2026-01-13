@@ -56,29 +56,35 @@ async function reboot(reason = "") {
 
 async function initRehook() {
     const rehook = document.getElementById('rehook');
+    const rehookRipple = rehook.querySelector('md-ripple');
     const rehookSwitch = rehook.querySelector('md-switch');
     const isEnabled = await updateRehookStatus();
-    if (isEnabled !== null) {
-        rehookSwitch.addEventListener('change', () => {
-            setRehookMode(rehookSwitch.selected);
-        });
+    if (isEnabled === null) {
+        rehookRipple.disabled = true;
+        rehookSwitch.disabled = true;
+        return;
     }
+    rehookSwitch.addEventListener('change', () => {
+        setRehookMode(rehookSwitch.selected);
+    });
 }
 
 async function updateRehookStatus() {
     const rehook = document.getElementById('rehook');
-    const rehookRipple = rehook.querySelector('md-ripple');
     const rehookSwitch = rehook.querySelector('md-switch');
 
     let isEnabled = null;
 
     const result = await exec(`kpatch rehook_status`, { env: { PATH: `${modDir}/bin` } });
     if (result.errno === 0) {
-        isEnabled = result.stdout.split(':')[1].trim() === 'enabled';
+        const mode = result.stdout.split(':')[1].trim();
+        if (mode === 'enabled') {
+            isEnabled = true;
+        } else if (mode === 'disabled') {
+            isEnabled = false;
+        }
         rehookSwitch.selected = isEnabled;
     }
-    rehookRipple.disabled = !isEnabled;
-    rehookSwitch.disabled = !isEnabled;
 
     return isEnabled;
 }
