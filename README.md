@@ -8,7 +8,7 @@ Standalone implementation of KPM support for Magisk/KernelSU
 
 - Patch scripts from [APatch](https://github.com/bmax121/APatch)
 - KPatch-Next binaries from [KernelSU-Next/KPatch-Next](https://github.com/KernelSU-Next/KPatch-Next)
-- magiskboot binay from [Magisk](https://github.com/topjohnwu/Magisk)
+- magiskboot binary from [Magisk](https://github.com/topjohnwu/Magisk)
 
 ## License
 
