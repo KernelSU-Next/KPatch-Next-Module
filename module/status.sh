@@ -41,7 +41,7 @@ until [ "$(getprop sys.boot_completed)" = "1" ]; do
     sleep 1
 done
 
-if kpatch hello >/dev/null 2>&1; then
+if [ -n "$(kpatch hello)" ]; then
     KPM_COUNT="$(kpatch kpm num 2>/dev/null || echo 0)"
     [ -z "$KPM_COUNT" ] && KPM_COUNT=0
 

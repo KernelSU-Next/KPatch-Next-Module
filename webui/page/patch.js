@@ -162,7 +162,8 @@ async function extractAndParseBootimg() {
         prepare.on('exit', () => resolve());
     });
 
-    const result = spawn('busybox', ['sh', `${modDir}/boot_extract.sh`], {
+    // get slot and device
+    const result = spawn('busybox', ['sh', `${modDir}/patch/boot_extract.sh`], {
         env: { PATH: `${modDir}/bin:/data/adb/ksu/bin:/data/adb/magisk:$PATH`, ASH_STANDALONE: '1' }
     });
 
@@ -362,7 +363,7 @@ function patch(type) {
     let args = ['sh'];
     if (type === "patch") {
         args.push(
-            `${modDir}/boot_patch.sh`,
+            `${modDir}/patch/boot_patch.sh`,
             bootDev,
             'true'
         );
@@ -381,7 +382,8 @@ function patch(type) {
             args.push('-T', 'kpm');
         });
     } else {
-        args.push(`${modDir}/boot_unpatch.sh`, bootDev);
+        // Unpatch logic
+        args.push(`${modDir}/patch/boot_unpatch.sh`, bootDev);
     }
 
     const process = spawn(
