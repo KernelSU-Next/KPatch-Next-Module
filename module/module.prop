@@ -6,3 +6,4 @@ author=rifsxd, KOWX712
 description=Standalone implementation of KPM support for Magisk/KernelSU
 updateJson=https://raw.githubusercontent.com/KernelSU-Next/KPatch-Next-Module/main/update.json
 banner=banner.png
+webuiIcon=banner.png
