@@ -226,6 +226,7 @@ body {
     border-radius: 20px;
     background-color: var(--md-sys-color-tonal-surface);
     word-wrap: break-word;
+    position: relative;
 }
 
 .switch-card label {
@@ -236,8 +237,6 @@ body {
     padding: 20px;
     box-sizing: border-box;
     font-size: 1.1em;
-    position: relative;
-    overflow: hidden;
 }
 
 .search-hidden {
