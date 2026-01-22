@@ -190,7 +190,14 @@
                         <div class="card-title" slot="headline" data-i18n="title_kernel">Kernel</div>
                         <div id="kernel-info"></div>
                     </div>
-                    <div class="module-list content-padding" id="kpm-embed-list"></div>
+                    <div class="switch-card content-padding patch-only">
+                        <label>
+                            <div data-i18n="label_flash_to_device">Flash to device</div>
+                            <md-switch selected id="flash-to-device"></md-switch>
+                        </label>
+                        <md-ripple></md-ripple>
+                    </div>
+                    <div class="module-list content-padding patch-only" id="kpm-embed-list"></div>
                     <div class="trailing-btn content-padding" id="patch-options">
                         <md-filled-button class="patch-only" id="embed" data-i18n="button_embed_kpm">Embed KPM</md-filled-button>
                         <md-filled-button class="patch-only" id="start" data-i18n="button_start">Start</md-filled-button>

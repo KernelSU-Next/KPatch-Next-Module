@@ -333,6 +333,8 @@ async function embedKPM() {
 function patch(type) {
     const terminal = document.querySelector('#patch-terminal');
     const pageContent = terminal.closest('.page-content');
+    const flashToDevice = document.getElementById('flash-to-device');
+
     const onOutput = (data) => {
         terminal.innerHTML += `<div>${data}</div>`;
         pageContent.scrollTo({ top: pageContent.scrollHeight, behavior: 'smooth' });
@@ -348,7 +350,7 @@ function patch(type) {
         args.push(
             `${modDir}/patch/boot_patch.sh`,
             bootDev,
-            'true'
+            flashToDevice.selected ? 'true' : 'false'
         );
 
         // New kpm
