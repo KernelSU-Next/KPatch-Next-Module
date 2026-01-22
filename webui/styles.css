@@ -221,6 +221,25 @@ body {
     transition: all 0.2s ease;
 }
 
+.switch-card {
+    width: 100%;
+    border-radius: 20px;
+    background-color: var(--md-sys-color-tonal-surface);
+    word-wrap: break-word;
+    position: relative;
+    overflow: hidden;
+}
+
+.switch-card label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    font-size: 1.1em;
+}
+
 .search-hidden {
     display: none !important;
 }

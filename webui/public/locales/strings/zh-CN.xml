@@ -35,6 +35,7 @@
     <string name="label_show_system_app">显示系统应用</string>
     <string name="label_system_default">系统默认</string>
     <string name="label_trigger_event">触发事件</string>
+    <string name="label_flash_to_device">直接安装</string>
     <!-- Status -->
     <string name="status_not_installed">未安装</string>
     <string name="status_working">工作中 😋</string>
