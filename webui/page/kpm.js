@@ -1,5 +1,5 @@
 import { exec, spawn, toast } from 'kernelsu-alt';
-import { modDir, persistDir, initInfo, MAX_CHUNK_SIZE, linkRedirect } from '../index.js';
+import { modDir, persistDir, initInfo, MAX_CHUNK_SIZE, escapeShell, linkRedirect } from '../index.js';
 import { getString } from '../language.js';
 import { setupPullToRefresh } from '../pull-to-refresh.js';
 
@@ -67,7 +67,7 @@ async function getKpmList() {
 }
 
 async function controlModule(moduleName, action) {
-    const result = await exec(`kpatch kpm ctl0 "${moduleName}" ${action}`, { env: { PATH: `${modDir}/bin` } });
+    const result = await exec(`kpatch kpm ctl0 "${moduleName}" ${escapeShell(action)}`, { env: { PATH: `${modDir}/bin` } });
     toast(result.errno === 0 ? result.stdout : result.stderr);
 }
 
