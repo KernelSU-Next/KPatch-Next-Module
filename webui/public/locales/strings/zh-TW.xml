@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- UI Labels -->
+    <string name="title_patch">修補</string>
+    <string name="title_unpatch">還原</string>
+    <string name="title_kpmodule">核心模組</string>
+    <string name="title_exclude">排除</string>
+    <string name="title_settings">設定</string>
+    <string name="title_home">首頁</string>
+    <string name="title_language">語言</string>
+    <string name="title_control_kpmodule">控制核心模組</string>
+    <string name="title_select_language">選擇語言</string>
+    <string name="title_reboot">重新啟動</string>
+    <string name="title_reboot_recovery">重新啟動至 Recovery</string>
+    <string name="title_reboot_bootloader">重新啟動至 Bootloader</string>
+    <string name="title_reboot_download">重新啟動至 Download</string>
+    <string name="title_reboot_edl">重新啟動至 EDL</string>
+    <string name="title_kernel">核心</string>
+    <string name="title_rehook_syscall">重新Hook Syscall</string>
+    <!-- Buttons -->
+    <string name="button_install">安裝</string>
+    <string name="button_uninstall">解除安裝</string>
+    <string name="button_embed_kpm">嵌入 KPM</string>
+    <string name="button_start">開始</string>
+    <string name="button_unpatch">還原</string>
+    <string name="button_cancel">取消</string>
+    <string name="button_ok">確定</string>
+    <string name="button_load">載入</string>
+    <string name="button_unload">取消載入</string>
+    <string name="button_refresh">重新整理</string>
+    <!-- Labels -->
+    <string name="label_input_control_parameters">輸入控制參數：</string>
+    <string name="label_parameters">參數</string>
+    <string name="label_load_temporarily">臨時載入</string>
+    <string name="label_show_system_app">顯示系統應用程式</string>
+    <string name="label_system_default">系統預設</string>
+    <string name="label_trigger_event">觸發事件</string>
+    <string name="label_flash_to_device">直接安裝</string>
+    <!-- Status -->
+    <string name="status_not_installed">未安裝</string>
+    <string name="status_working">運作中 😋</string>
+    <string name="status_loading">載入中...</string>
+    <!-- Info -->
+    <string name="info_kernel_version">核心版本</string>
+    <string name="info_system_version">系統版本</string>
+    <string name="info_fingerprint">指紋</string>
+    <string name="info_selinux_status">SELinux 狀態</string>
+    <string name="info_version">版本: %1$s</string>
+    <string name="info_time">時間: %1$s</string>
+    <string name="info_config">配置: %1$s</string>
+    <string name="info_slot">插槽: %1$s</string>
+    <string name="info_device">裝置: %1$s</string>
+    <string name="info_device_unknown">裝置: 未知</string>
+    <string name="info_author">作者: %1$s</string>
+    <string name="info_args">參數: %1$s</string>
+    <string name="info_no_description">無描述</string>
+    <string name="info_embedded">已嵌入</string>
+    <string name="info_user">使用者 %1$s</string>
+    <string name="info_system">系統</string>
+    <!-- Messages -->
+    <string name="msg_no_module_loaded">未載入模組</string>
+    <string name="msg_no_app_found">未發現應用程式</string>
+    <string name="msg_no_module_found">未發現模組</string>
+    <string name="msg_module_loaded">%1$s 將被載入</string>
+    <string name="msg_unload_module">取消載入 %1$s 模組？</string>
+    <string name="msg_redirecting_to">正在前往 %1$s</string>
+    <string name="msg_failed_open_link">exec 開啟連結失敗</string>
+    <string name="msg_failed_parse_kernel">解析核心失敗：</string>
+    <string name="msg_boot_extract_failed">提取 Boot 失敗</string>
+    <string name="msg_failed_locate_boot">無法定位 Boot 映像檔</string>
+    <string name="msg_invalid_kpm_file">無效的 KPM 檔案</string>
+    <string name="msg_could_not_parse_kpm">無法解析 KPM 訊息</string>
+    <string name="msg_error_no_boot_image">錯誤：找不到 Boot 映像檔</string>
+    <string name="msg_please_select_file">請選擇 %1$s 檔案</string>
+    <string name="msg_please_wait">請稍後...</string>
+    <string name="msg_uploading">正在上傳...</string>
+    <string name="msg_upload_cancelled">上傳已取消</string>
+    <string name="msg_error">錯誤：%1$s</string>
+    <string name="msg_successfully_loaded">成功載入 %1$s</string>
+    <string name="msg_failed_load_module">載入模組 %1$s 失敗</string>
+    <string name="msg_failed_get_module_info">取得模組資訊失敗</string>
+    <string name="msg_error_loading_apps">載入應用時發生錯誤：</string>
+    <string name="msg_error_rendering_apps">繪製應用時發生錯誤：</string>
+    <string name="msg_unknown">未知</string>
+</resources>

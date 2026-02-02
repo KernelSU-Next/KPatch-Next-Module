@@ -3,3 +3,4 @@
 /module/bin
 /out
 *.zip
+.DS_Store
