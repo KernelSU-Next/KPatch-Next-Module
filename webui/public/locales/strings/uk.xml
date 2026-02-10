@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- UI Labels -->
+    <string name="title_patch">Патч</string>
+    <string name="title_unpatch">UnPatch</string>
+    <string name="title_kpmodule">KPModule</string>
     <string name="title_exclude">Винятки</string>
     <string name="title_settings">Налаштування</string>
     <string name="title_home">Головна</string>
     <string name="title_language">Мова</string>
-    <string name="title_control_kpmodule">Control KPModule</string>
+    <string name="title_control_kpmodule">Керування KPModule</string>
     <string name="title_select_language">Виберіть мову</string>
     <string name="title_reboot">Перезавантаження</string>
     <string name="title_reboot_recovery">Перезавантаження в Recovery</string>
@@ -13,24 +16,26 @@
     <string name="title_reboot_download">Перезавантаження в Download</string>
     <string name="title_reboot_edl">Перезавантаження в EDL</string>
     <string name="title_kernel">Ядро</string>
+    <string name="title_rehook_syscall">Rehook Syscall</string>
     <!-- Buttons -->
     <string name="button_install">Натисніть, щоб встановити</string>
     <string name="button_uninstall">Видалити</string>
     <string name="button_embed_kpm">Вбудувати KPM</string>
     <string name="button_start">Почати</string>
-    <string name="button_unpatch">Видалити</string>
+    <string name="button_unpatch">UnPatch</string>
     <string name="button_cancel">Скасувати</string>
     <string name="button_ok">ОК</string>
     <string name="button_load">Завантажити</string>
-    <string name="button_unload">Розвантажити</string>
+    <string name="button_unload">Вивантажити</string>
     <string name="button_refresh">Оновити</string>
     <!-- Labels -->
     <string name="label_input_control_parameters">Вхідні параметри керування:</string>
     <string name="label_parameters">Параметри</string>
     <string name="label_load_temporarily">Тимчасово завантажити</string>
-    <string name="label_show_system_app">Показувати системні додатоки</string>
+    <string name="label_show_system_app">Показувати системні додатки</string>
     <string name="label_system_default">Системні за замовчуванням</string>
     <string name="label_trigger_event">Тригерна подія</string>
+    <string name="label_flash_to_device">Прошити в пристрій</string>
     <!-- Status -->
     <string name="status_not_installed">Не встановлено</string>
     <string name="status_working">Працює 😋</string>
@@ -45,7 +50,7 @@
     <string name="info_config">Конфігурація: %1$s</string>
     <string name="info_slot">Слот: %1$s</string>
     <string name="info_device">Девайс: %1$s</string>
-    <string name="info_device_unknown">Девайс: Unknown</string>
+    <string name="info_device_unknown">Девайс: невідомо</string>
     <string name="info_author">Автор: %1$s</string>
     <string name="info_args">Аргументи: %1$s</string>
     <string name="info_no_description">Без опису</string>
@@ -68,7 +73,7 @@
     <string name="msg_error_no_boot_image">Помилка: Не знайдено завантажувального образу.</string>
     <string name="msg_please_select_file">Будь ласка, виберіть файл %1$s</string>
     <string name="msg_please_wait">Будь ласка, зачекайте...</string>
-    <string name="msg_uploading">Завантаження... </string>
+    <string name="msg_uploading">Завантаження...</string>
     <string name="msg_upload_cancelled">Завантаження скасовано</string>
     <string name="msg_error">Помилка: %1$s</string>
     <string name="msg_successfully_loaded">Успішно завантажено %1$s</string>
