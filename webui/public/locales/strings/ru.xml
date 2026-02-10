@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- UI Labels -->
+    <string name="title_patch">Патч</string>
+    <string name="title_unpatch">UnPatch</string>
+    <string name="title_kpmodule">KPModule</string>
     <string name="title_exclude">Исключения</string>
     <string name="title_settings">Настройки</string>
     <string name="title_home">Главная</string>
@@ -13,12 +16,13 @@
     <string name="title_reboot_download">Перезагрузка в Download</string>
     <string name="title_reboot_edl">Перезагрузка в EDL</string>
     <string name="title_kernel">Ядро</string>
+    <string name="title_rehook_syscall">Rehook Syscall</string>
     <!-- Buttons -->
     <string name="button_install">Нажмите для установки</string>
     <string name="button_uninstall">Удалить</string>
     <string name="button_embed_kpm">Встроить KPM</string>
     <string name="button_start">Запустить</string>
-    <string name="button_unpatch">Снять патч</string>
+    <string name="button_unpatch">UnPatch</string>
     <string name="button_cancel">Отмена</string>
     <string name="button_ok">ОК</string>
     <string name="button_load">Загрузить</string>
@@ -31,6 +35,7 @@
     <string name="label_show_system_app">Показывать системные приложения</string>
     <string name="label_system_default">По умолчанию (системный)</string>
     <string name="label_trigger_event">Событие-триггер</string>
+    <string name="label_flash_to_device">Прошить в устройство</string>
     <!-- Status -->
     <string name="status_not_installed">Не установлено</string>
     <string name="status_working">Работает 😋</string>
