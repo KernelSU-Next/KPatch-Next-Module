@@ -100,7 +100,7 @@ async function detectUserLanguage() {
  */
 export async function loadTranslations() {
     try {
-        // load Englsih as base translations
+        // load English as base translations
         const baseResponse = await fetch('./locales/strings/en.xml');
         const baseXML = await baseResponse.text();
         baseTranslations = parseTranslationsXML(baseXML);
@@ -155,7 +155,7 @@ function applyTranslations() {
 
 /**
  * Function to set a language
- * @param {string} language - Target langauge to set
+ * @param {string} language - Target language to set
  * @returns {void}
  */
 function setLanguage(language) {
