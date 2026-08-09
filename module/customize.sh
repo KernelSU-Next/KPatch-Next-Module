@@ -5,6 +5,11 @@ if [ "$APATCH" ]; then
     abort "! APatch is unsupported"
 fi
 
+# Prefer KSU WebUI
+if [ "$KSU" ]; then
+    rm "$MODPATH/action.sh"
+fi
+
 # We only support arm64
 if [ "$ARCH" != "arm64" ]; then
     abort "! Only arm64 is supported"
